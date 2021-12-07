@@ -1,6 +1,8 @@
 # svl-ui-design
 
-## Getting Started
+杭州薮猫科技 UI 设计规范
+
+## 一、项目启动
 
 Install dependencies,
 
