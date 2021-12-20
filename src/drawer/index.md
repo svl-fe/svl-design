@@ -15,7 +15,7 @@ group:
 ```tsx
 import React, { useState } from 'react';
 import { Button } from 'antd';
-import { Drawer } from 'svl-ui-design';
+import { Drawer } from 'svl-design';
 
 export default () => {
   const [visible, setVisible] = useState(false);

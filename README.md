@@ -1,4 +1,4 @@
-# svl-ui-design
+# svl-design
 
 杭州薮猫科技 UI 设计规范
 

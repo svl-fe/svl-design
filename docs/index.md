@@ -1,6 +1,6 @@
 ---
 hero:
-  title: svl-ui-design
+  title: svl-design
   desc: 薮猫科技UI 设计规范
   actions:
     - text: 快速启动
