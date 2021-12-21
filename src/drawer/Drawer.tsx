@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { Button, Drawer as ADrawer, Space } from 'antd';
-import { CloseOutlined } from '@ant-design/icons';
 import type { DrawerProps as ADrawerProps } from 'antd';
-import classNames from 'classnames/bind';
+import { CloseOutlined } from '@ant-design/icons';
+import classNames from 'classnames';
 
 import './style/index.less';
 
@@ -31,10 +31,7 @@ export const Drawer: React.FC<DrawerProps> = (props) => {
     ...rest
   } = props;
 
-  const drawerCls = classNames({
-    'svl-drawer': true,
-    className,
-  });
+  const drawerCls = classNames('svl-drawer', className);
 
   const handleClose = (event: React.MouseEvent<HTMLButtonElement>) => {
     onClose?.(event);
