@@ -1,7 +1,25 @@
 {
-  "private": false,
   "name": "svl-design",
-  "version": "0.0.1",
+  "private": false,
+  "version": "0.0.2",
+  "keywords": [
+    "React",
+    "Components",
+    "UI Design"
+  ],
+  "author": "ShiMu",
+  "license": "MIT",
+  "homepage": "https://svl-fe.github.io/svl-design/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/svl-fe/svl-design"
+  },
+  "module": "es/index.js",
+  "typings": "es/index.d.ts",
+  "files": [
+    "dist",
+    "es"
+  ],
   "scripts": {
     "start": "dumi dev",
     "docs:build": "dumi build",
@@ -13,8 +31,6 @@
     "test:coverage": "umi-test --coverage",
     "prepublishOnly": "npm run build"
   },
-  "module": "es/index.js",
-  "typings": "es/index.d.ts",
   "gitHooks": {
     "pre-commit": "lint-staged"
   },
