@@ -5,32 +5,20 @@ nav:
 group:
   path: /components
   title: 反馈
-  order: 2
+  order: 4
 ---
 
-## Drawer 抽屉
+## Modal 对话框
 
 示例:
 
 ```tsx
 import React, { useState } from 'react';
 import { Button } from 'antd';
-import { Drawer } from 'svl-design';
+import { Modal } from 'svl-design';
 
 export default () => {
   const [visible, setVisible] = useState(false);
-  const [loading, setLoading] = useState(false);
-
-  const onOk = () => {
-    return new Promise((resolve) => {
-      setLoading(true);
-      setTimeout(() => {
-        resolve();
-        setVisible(false);
-        setLoading(false);
-      }, 3000);
-    });
-  };
 
   return (
     <div>
@@ -38,17 +26,16 @@ export default () => {
         打开
       </Button>
 
-      <Drawer
-        loading={loading}
+      <Modal
         visible={visible}
-        titleName="基础抽屉"
-        onClose={() => setVisible(false)}
-        onOk={onOk}
+        titleName="模态框标题"
+        onCancel={() => setVisible(false)}
+        onOk={() => setVisible(false)}
       >
         <p>内容区....</p>
         <p>内容区...</p>
         <p>内容区...</p>
-      </Drawer>
+      </Modal>
     </div>
   );
 };
