@@ -46,8 +46,10 @@ export const Drawer: React.FC<DrawerProps> = (props) => {
   const dftFooter = (
     <div className={'svl-drawer-footer'}>
       <Space>
-        <Button onClick={handleClose}>取消</Button>
-        <Button onClick={handleOk} type="primary" loading={loading}>
+        <Button size="large" onClick={handleClose}>
+          取消
+        </Button>
+        <Button size="large" onClick={handleOk} type="primary" loading={loading}>
           完成
         </Button>
       </Space>

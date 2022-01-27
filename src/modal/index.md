@@ -31,6 +31,14 @@ export default () => {
         titleName="模态框标题"
         onCancel={() => setVisible(false)}
         onOk={() => setVisible(false)}
+        footer={[
+          <Button size="large" type="primary" onClick={() => setVisible(false)}>
+            确定
+          </Button>,
+          <Button size="large" onClick={() => setVisible(false)}>
+            取消
+          </Button>,
+        ]}
       >
         <p>内容区....</p>
         <p>内容区...</p>

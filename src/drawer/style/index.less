@@ -9,10 +9,6 @@
     border: none;
   }
 
-  .ant-drawer-body {
-    padding-top: @drawer-body-padding-top !important;
-  }
-
   .svl-drawer-footer {
     text-align: right;
   }
@@ -22,14 +18,20 @@
   }
 
   .svl-title {
+    color: @text-color;
     &::before {
       position: absolute;
+      top: 24px;
       left: 0;
       display: inline-block;
       width: 3px;
-      height: 18px;
+      height: 24px;
       background: @primary-color;
+      border-radius: 1.5px;
       content: '';
     }
+  }
+  .ant-btn.ant-btn-lg {
+    min-width: 96px;
   }
 }
