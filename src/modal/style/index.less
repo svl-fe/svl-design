@@ -2,29 +2,33 @@
 
 .svl-modal {
   position: relative;
-
+  .ant-modal-content {
+    border-radius: 4px;
+  }
   .ant-modal-header {
     border-bottom: none;
+    border-radius: 4px 4px 0 0;
   }
 
   .ant-modal-footer {
     border-top: none;
-  }
-
-  .ant-modal-body {
-    padding: 8px 24px;
+    border-radius: 0 0 4px 4px;
   }
 
   &-title {
     &::before {
       position: absolute;
-      top: 15px;
+      top: 24px;
       left: 0;
       display: inline-block;
       width: 3px;
       height: 24px;
       background: @primary-color;
+      border-radius: 1.5px;
       content: '';
     }
+  }
+  .ant-btn.ant-btn-lg {
+    min-width: 96px;
   }
 }
