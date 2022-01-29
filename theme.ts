@@ -1,5 +1,13 @@
 export default {
   'primary-color': '#2A9D8F',
+  'primary-color-hover': '#55B1A5',
+  'primary-color-active': '#227E72',
+
+  'disabled-bg': '#F7F8FA',
+  'disabled-active-bg': '#F7F8FA',
+  // btn start
+  'btn-link-hover-bg': '#F2F3F5',
+  // btn end
   // radio reset start
   'radio-button-color': 'rgba(150, 151, 153, 1)',
   'radio-button-checked-bg': 'rgba(42, 157, 143, 0.1)',
@@ -24,6 +32,7 @@ export default {
   // form end
   // form start
 
+  // modal drawer start
   // 'modal-header-padding': '24px 32px',
   'modal-header-padding': '24px',
   'modal-body-padding': '0 24px',
@@ -31,8 +40,7 @@ export default {
   'modal-footer-padding-horizontal': '24px',
   'drawer-header-padding': '24px',
   'drawer-body-padding': '0 24px',
-
-  // form end
+  // modal drawer end
 
   // base start
   'success-color': '#2A9D8F',

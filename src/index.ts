@@ -6,3 +6,6 @@ export { default as Modal } from './modal';
 
 export type { PopconfirmProps } from './popconfirm';
 export { default as Popconfirm } from './popconfirm';
+
+export type { ButtonProps } from './button';
+export { default as Button } from './button';
