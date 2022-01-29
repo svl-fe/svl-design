@@ -9,3 +9,6 @@ export { default as Popconfirm } from './popconfirm';
 
 export type { ButtonProps } from './button';
 export { default as Button } from './button';
+
+export type { DropDownProps } from './dropdown';
+export { default as Dropdown } from './dropdown';
