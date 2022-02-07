@@ -6,6 +6,18 @@ export default {
   'disabled-bg': '#F7F8FA',
   'disabled-active-bg': '#EBEDF0',
   'item-hover-bg': '#EAF6F4',
+  // alert start
+  'alert-with-description-icon-size': '16px',
+  'alert-success-border-color': 'rgba(42, 157, 143, 0.6)',
+  'alert-success-bg-color': 'rgba(42, 157, 143, 0.05)',
+  'alert-info-border-color': 'rgba(42, 157, 143, 0.6)',
+  'alert-info-bg-color': 'rgba(42, 157, 143, 0.05)',
+  'alert-warning-border-color': '#F4A261',
+  'alert-warning-bg-color': 'rgba(244, 162, 97, 0.1)',
+  'alert-error-border-color': '#DB504A',
+  'alert-error-bg-color': 'rgba(219, 80, 74, 0.1)',
+  'alert-message-color': '#323233',
+  // alert end
   // btn start
   'btn-link-hover-bg': '#F2F3F5',
   // btn end
@@ -15,10 +27,16 @@ export default {
   // radio reset end
   'menu-item-active-bg': 'rgba(42, 157, 143, 0.1)',
   'menu-icon-size': '16px',
+  // tabs start
+  'tabs-horizontal-margin': '0 0 0 48px',
+  // tabs end
   // table start
   'table-header-bg': '#f7f8fa',
   'table-row-hover-bg': 'rgba(42, 157, 143, 0.1)',
   // table end
+  // tooltip start
+  'tooltip-bg': '#646566',
+  // tooltip end
   // select start
   'select-item-selected-bg': 'rgba(42, 157, 143, 0.2)',
   'select-item-active-bg': 'rgba(42, 157, 143, 0.1)',

@@ -18,3 +18,6 @@ export { default as Steps } from './steps';
 
 export type { CheckboxProps } from './checkbox';
 export { default as Checkbox } from './checkbox';
+
+export type { AlertProps } from './alert';
+export { default as Alert } from './alert';
