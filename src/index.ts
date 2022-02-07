@@ -12,3 +12,6 @@ export { default as Button } from './button';
 
 export type { DropDownProps } from './dropdown';
 export { default as Dropdown } from './dropdown';
+
+export type { StepsProps } from './steps';
+export { default as Steps } from './steps';
