@@ -4,7 +4,7 @@ export default {
   'primary-color-active': '#227E72',
 
   'disabled-bg': '#F7F8FA',
-  'disabled-active-bg': '#F7F8FA',
+  'disabled-active-bg': '#EBEDF0',
   'item-hover-bg': '#EAF6F4',
   // btn start
   'btn-link-hover-bg': '#F2F3F5',

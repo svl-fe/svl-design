@@ -15,3 +15,6 @@ export { default as Dropdown } from './dropdown';
 
 export type { StepsProps } from './steps';
 export { default as Steps } from './steps';
+
+export type { CheckboxProps } from './checkbox';
+export { default as Checkbox } from './checkbox';
