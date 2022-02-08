@@ -3,9 +3,9 @@ nav:
   title: 组件
   path: /components
 group:
-  path: /components
-  title: 反馈
-  order: 5
+  # path: /components
+  title: 通用
+  order: 0
 ---
 
 ## Button 按钮

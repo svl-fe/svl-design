@@ -3,9 +3,9 @@ nav:
   title: 组件
   path: /components
 group:
-  path: /components
-  title: 反馈
-  order: 4
+  # path: /components
+  title: 数据录入
+  order: 3
 ---
 
 ## Checkbox 多选框

@@ -3,9 +3,9 @@ nav:
   title: 组件
   path: /components
 group:
-  path: /components
-  title: 反馈
-  order: 5
+  # path: /components
+  title: 数据展示
+  order: 4
 ---
 
 ## Label 标签
