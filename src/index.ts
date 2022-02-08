@@ -21,3 +21,6 @@ export { default as Checkbox } from './checkbox';
 
 export type { AlertProps } from './alert';
 export { default as Alert } from './alert';
+
+export type { LabelProps } from './label';
+export { default as Label } from './label';

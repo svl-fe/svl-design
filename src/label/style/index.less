@@ -1,0 +1,101 @@
+@import '../../style/index';
+
+.svl-label {
+  position: relative;
+  display: inline-block;
+  padding: 0 4px;
+  color: @text-color;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  border-radius: 2px;
+
+  &-type-line {
+    line-height: 18px;
+    border-style: solid;
+    border-width: 1px;
+  }
+  &-status-success {
+    color: @success-color;
+  }
+  &-status-error {
+    color: @error-color;
+  }
+  &-status-warning {
+    color: @warning-color;
+  }
+
+  &-type-face {
+    background-color: @svl-bg;
+  }
+  &-type-face&-status-success {
+    color: #fff;
+    background-color: @success-color;
+  }
+  &-type-face&-status-warning {
+    color: #fff;
+    background-color: @warning-color;
+  }
+  &-type-face&-status-error {
+    color: #fff;
+    background-color: @error-color;
+  }
+
+  &-type-ghost {
+    background-color: @svl-bg;
+  }
+  &-type-ghost&-status-success {
+    background-color: fade(@success-color, 10%);
+  }
+  &-type-ghost&-status-warning {
+    background-color: fade(@warning-color, 10%);
+  }
+  &-type-ghost&-status-error {
+    background-color: fade(@error-color, 10%);
+  }
+
+  &-size-sm {
+    line-height: 18px;
+  }
+  &-size-sm&-type-line {
+    line-height: 16px;
+  }
+  &-size-lg {
+    padding: 2px 4px;
+  }
+  &-hidden {
+    display: none;
+  }
+
+  &-close-icon {
+    margin-left: 6px;
+    font-size: 12px;
+    cursor: pointer;
+  }
+
+  &-close {
+    position: relative;
+    display: inline-block;
+    width: 6px;
+    &::before {
+      position: absolute;
+      top: -4px;
+      left: -3px;
+      width: 9px;
+      height: 1px;
+      background: @text-color-secondary;
+      transform: rotateZ(45deg);
+      content: '';
+    }
+    &::after {
+      position: absolute;
+      top: -4px;
+      left: -3px;
+      width: 9px;
+      height: 1px;
+      background: @text-color-secondary;
+      transform: rotateZ(-45deg);
+      content: '';
+    }
+  }
+}
