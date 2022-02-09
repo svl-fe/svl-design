@@ -3,9 +3,9 @@ nav:
   title: 组件
   path: /components
 group:
-  path: /components
+  # path: /components
   title: 反馈
-  order: 4
+  order: 5
 ---
 
 ## Modal 对话框
