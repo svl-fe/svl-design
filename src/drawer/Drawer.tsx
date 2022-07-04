@@ -1,10 +1,10 @@
 import * as React from 'react';
 import { Button, Drawer as ADrawer, Space } from 'antd';
 import type { DrawerProps as ADrawerProps } from 'antd';
-import { CloseOutlined } from '@ant-design/icons';
 import classNames from 'classnames';
 
 import './style/index.less';
+import { Close } from '../const';
 
 interface DrawerProps extends ADrawerProps {
   /** 标题名字 */
@@ -25,6 +25,7 @@ export const Drawer: React.FC<DrawerProps> = (props) => {
     placement = 'right',
     extra,
     footer,
+    closeIcon = Close,
     onClose,
     onOk,
     children,
@@ -58,7 +59,7 @@ export const Drawer: React.FC<DrawerProps> = (props) => {
 
   const dftExtra = (
     <span onClick={handleClose} className={'svl-drawer-close'}>
-      <CloseOutlined />
+      {closeIcon}
     </span>
   );
 
