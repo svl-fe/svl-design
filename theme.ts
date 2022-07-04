@@ -6,6 +6,7 @@ export default {
   'disabled-bg': '#F7F8FA',
   'disabled-active-bg': '#EBEDF0',
   'item-hover-bg': '#EAF6F4',
+  'border-color-base': '#DCDEE0',
   // alert start
   'alert-with-description-icon-size': '16px',
   'alert-success-border-color': 'rgba(42, 157, 143, 0.6)',
