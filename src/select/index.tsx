@@ -3,7 +3,9 @@ import { Select as ASelect } from 'antd';
 import type { SelectProps as ASelectProps } from 'antd';
 import { PullDown } from '../const';
 
-export interface SelectProps extends ASelectProps {}
+export interface SelectProps extends ASelectProps {
+  mode?: 'multiple' | 'tags';
+}
 
 const { OptGroup, Option, SECRET_COMBOBOX_MODE_DO_NOT_USE } = ASelect;
 
