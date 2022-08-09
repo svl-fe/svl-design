@@ -5,7 +5,9 @@ import { PullDown } from '../const';
 
 const { TreeNode, SHOW_ALL, SHOW_CHILD, SHOW_PARENT } = ATreeSelect;
 
-export interface TreeSelectProps extends ATreeSelectProps {}
+export interface TreeSelectProps extends ATreeSelectProps {
+  suffixIcon?: React.ReactNode;
+}
 
 const TreeSelectR: React.FC<TreeSelectProps> = (props) => {
   const { suffixIcon = PullDown, ...rest } = props;
