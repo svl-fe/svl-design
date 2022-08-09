@@ -14,7 +14,20 @@
   }
 
   .svl-drawer-close {
+    display: inline-block;
+    color: @text-color-secondary;
+    font-size: @font-size-lg;
+    font-style: normal;
+    text-align: center;
+    text-transform: none;
     cursor: pointer;
+    text-rendering: auto;
+
+    &:focus,
+    &:hover {
+      color: @icon-color-hover;
+      text-decoration: none;
+    }
   }
 
   .svl-title {
