@@ -1,11 +1,9 @@
 import * as React from 'react';
 import { Select as ASelect } from 'antd';
-import type { SelectProps as ASelectProps } from 'antd';
+import type { SelectProps } from 'antd';
 import { PullDown } from '../const';
 
-export interface SelectProps extends ASelectProps {
-  mode?: 'multiple' | 'tags';
-}
+export type { SelectProps };
 
 const { OptGroup, Option, SECRET_COMBOBOX_MODE_DO_NOT_USE } = ASelect;
 

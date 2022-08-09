@@ -1,13 +1,11 @@
 import * as React from 'react';
 import { TreeSelect as ATreeSelect } from 'antd';
-import type { TreeSelectProps as ATreeSelectProps } from 'antd';
+import type { TreeSelectProps } from 'antd';
 import { PullDown } from '../const';
 
 const { TreeNode, SHOW_ALL, SHOW_CHILD, SHOW_PARENT } = ATreeSelect;
 
-export interface TreeSelectProps extends ATreeSelectProps {
-  suffixIcon?: React.ReactNode;
-}
+export type { TreeSelectProps };
 
 const TreeSelectR: React.FC<TreeSelectProps> = (props) => {
   const { suffixIcon = PullDown, ...rest } = props;
