@@ -24,3 +24,12 @@ export { default as Alert } from './alert';
 
 export type { LabelProps } from './label';
 export { default as Label } from './label';
+
+export type { SelectProps } from './select';
+export { default as Select } from './select';
+
+export type { CascaderProps } from './cascader';
+export { default as Cascader } from './cascader';
+
+export type { TreeSelectProps } from './tree-select';
+export { default as TreeSelect } from './tree-select';
