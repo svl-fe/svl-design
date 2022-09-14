@@ -83,6 +83,7 @@ export default () => {
 | status | 标签状态 | 'success' \| 'error' \| 'warning' \| 'default' | 'default' |  |  |
 | className | 类名 | string | - |  |  |
 | style | 样式 | React.CSSProperties | - |  |  |
+| children | 子组件 | ReactNode | - |  |  |
 | closable | 标签是否可以关闭（点击默认关闭） | boolean | false |  |  |
 | closeIcon | 自定义关闭按钮 | ReactNode | - |  |  |
 | icon | 设置图标 | ReactNode | - |  |  |
