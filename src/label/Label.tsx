@@ -10,6 +10,7 @@ interface LabelProps {
   status?: 'success' | 'error' | 'warning' | 'default';
   className?: string;
   style?: React.CSSProperties;
+  children?: React.ReactNode;
   closable?: boolean;
   closeIcon?: React.ReactNode;
   visible?: boolean;
