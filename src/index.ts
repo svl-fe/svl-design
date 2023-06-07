@@ -31,5 +31,8 @@ export { default as Select } from './select';
 export type { CascaderProps } from './cascader';
 export { default as Cascader } from './cascader';
 
+export type { TabsProps } from './tabs';
+export { default as Tabs } from './tabs';
+
 export type { TreeSelectProps } from './tree-select';
 export { default as TreeSelect } from './tree-select';
