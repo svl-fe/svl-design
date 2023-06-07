@@ -1,0 +1,40 @@
+@import '../../style/index';
+
+.svl-tabs.svl-radius-tabs {
+  > .ant-tabs-nav {
+    &::before {
+      display: none;
+    }
+    .ant-tabs-nav-wrap {
+      padding: 6px 24px;
+      background-color: @disabled-bg;
+    }
+    .ant-tabs-nav-list {
+      padding: 5px;
+      background-color: #fff;
+      border: 1px solid @disabled-active-bg;
+      border-radius: 22px;
+    }
+    .ant-tabs-tab {
+      padding: 6px 20px;
+      background-color: #fff;
+      border: none;
+      border-radius: 20px;
+      &.ant-tabs-tab-active {
+        background-color: @primary-color;
+
+        .ant-tabs-tab-btn {
+          color: #fff;
+        }
+      }
+      .ant-tabs-tab-btn {
+        font-weight: 400;
+        line-height: 20px;
+      }
+
+      & + .ant-tabs-tab {
+        margin-left: 24px;
+      }
+    }
+  }
+}
