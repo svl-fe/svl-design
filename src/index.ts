@@ -36,3 +36,6 @@ export { default as Tabs } from './tabs';
 
 export type { TreeSelectProps } from './tree-select';
 export { default as TreeSelect } from './tree-select';
+
+export type { SwitchProps } from './switch';
+export { default as Switch } from './switch';
