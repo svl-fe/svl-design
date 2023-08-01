@@ -131,3 +131,16 @@ export default () => {
 | icon | 设置图标 | ReactNode | - |  |  |
 | visible | 是否显示标签 | boolean | true |  |  |
 | onClose | 关闭时的回调（可通过 `e.preventDefault()` 来阻止默认行为） | (e) => void | - |  |  |
+| color | 文字颜色 `backgroundColor` 根据文字颜色透明度 0.1 | hex 色值 | - |  | `0.0.14` |
+| dot | 是否显示小圆点 | boolean \| `DotConfig` | false |  | `0.0.14` |
+
+> <b>Tips</b>: dot 存在时，Label background 则处于透明状态,字体颜色依旧可以通过 color 来控制 <br/> dot color 默认取文字颜色，dot 类型为 DotConfig 时，dot color 取 DotConfig['color']
+
+```typescript
+interface DotConfig {
+  /** dot 是否显示 */
+  show: boolean;
+  /** dot 颜色 */
+  color: '#2A9D8F';
+}
+```

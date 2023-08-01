@@ -43,7 +43,7 @@ export const Label: React.FC<LabelProps> = (props) => {
     onClose,
     children,
     color,
-    dot,
+    dot = false,
   } = props;
 
   const dotVisible = React.useMemo(() => {
