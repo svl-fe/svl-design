@@ -69,6 +69,48 @@ export default () => {
           标签文本
         </Label>
       </Space>
+      <Space direction="vertical">
+        <Label type="ghost" color="#0867FF">
+          标签文本
+        </Label>
+        <Label type="ghost" color="#E6505C">
+          标签文本
+        </Label>
+        <Label type="ghost" color="#FE893B">
+          标签文本
+        </Label>
+        <Label type="ghost" color="#2A9D8F">
+          标签文本
+        </Label>
+      </Space>
+      <Space direction="vertical">
+        <Label dot color="#0867FF" size="small">
+          标签文本
+        </Label>
+        <Label dot color="#E6505C">
+          标签文本
+        </Label>
+        <Label dot color="#FE893B">
+          标签文本
+        </Label>
+        <Label dot color="#2A9D8F">
+          标签文本
+        </Label>
+      </Space>
+      <Space direction="vertical">
+        <Label dot={{ show: true, color: '#2A9D8F' }} color="#969799" size="small">
+          标签文本
+        </Label>
+        <Label dot={{ show: true, color: '#2A9D8F' }} color="#E6505C">
+          标签文本
+        </Label>
+        <Label dot={{ show: true, color: '#2A9D8F' }} color="#FE893B">
+          标签文本
+        </Label>
+        <Label dot={{ show: true, color: '#2A9D8F' }} color="#2A9D8F">
+          标签文本
+        </Label>
+      </Space>
     </Space>
   );
 };

@@ -1,8 +1,15 @@
 import * as React from 'react';
 import { useEffect } from 'react';
 import classNames from 'classnames';
+import { Close } from '../const';
 
 import './style/index.less';
+import { hex2rgba } from '../utils';
+
+interface DotConfig {
+  show: boolean;
+  color: React.CSSProperties['color'];
+}
 
 interface LabelProps {
   type?: 'line' | 'face' | 'ghost';
@@ -16,6 +23,8 @@ interface LabelProps {
   visible?: boolean;
   onClose?: (e: React.MouseEvent<HTMLElement>) => void;
   icon?: React.ReactNode;
+  color?: React.CSSProperties['color'];
+  dot?: boolean | DotConfig;
 }
 
 const prefixCls = 'svl-label';
@@ -33,7 +42,17 @@ export const Label: React.FC<LabelProps> = (props) => {
     closeIcon,
     onClose,
     children,
+    color,
+    dot,
   } = props;
+
+  const dotVisible = React.useMemo(() => {
+    if (!dot) return false;
+    if (typeof dot === 'boolean') {
+      return dot;
+    }
+    return dot.show;
+  }, [dot]);
 
   const sizeCls = size ? sizeClassNameMap[size] || '' : '';
   const [visible, setVisible] = React.useState(true);
@@ -44,6 +63,7 @@ export const Label: React.FC<LabelProps> = (props) => {
       [`${prefixCls}-size-${sizeCls}`]: sizeCls,
       [`${prefixCls}-status-${status}`]: !!status,
       [`${prefixCls}-hidden`]: !visible,
+      [`${prefixCls}-dot`]: dotVisible,
     },
     className,
   );
@@ -76,14 +96,20 @@ export const Label: React.FC<LabelProps> = (props) => {
           data-testid="custom-element"
           className={`${prefixCls}-close-icon ${prefixCls}-close`}
           onClick={handleCloseClick}
-        ></span>
+        >
+          {Close}
+        </span>
       );
     }
     return null;
   };
 
   return (
-    <span className={labelCls} style={style}>
+    <span
+      className={labelCls}
+      style={{ color, background: dotVisible ? 'transparent' : hex2rgba(color, 0.1), ...style }}
+    >
+      {dotVisible && <i style={{ color: typeof dot !== 'boolean' ? dot?.color : '' }}></i>}
       {icon || null}
       {children}
       {renderCloseIcon()}
