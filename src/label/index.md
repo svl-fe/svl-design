@@ -69,6 +69,48 @@ export default () => {
           标签文本
         </Label>
       </Space>
+      <Space direction="vertical">
+        <Label type="ghost" color="#0867FF">
+          标签文本
+        </Label>
+        <Label type="ghost" color="#E6505C">
+          标签文本
+        </Label>
+        <Label type="ghost" color="#FE893B">
+          标签文本
+        </Label>
+        <Label type="ghost" color="#2A9D8F">
+          标签文本
+        </Label>
+      </Space>
+      <Space direction="vertical">
+        <Label dot color="#0867FF" size="small">
+          标签文本
+        </Label>
+        <Label dot color="#E6505C">
+          标签文本
+        </Label>
+        <Label dot color="#FE893B">
+          标签文本
+        </Label>
+        <Label dot color="#2A9D8F">
+          标签文本
+        </Label>
+      </Space>
+      <Space direction="vertical">
+        <Label dot={{ show: true, color: '#2A9D8F' }} color="#969799" size="small">
+          标签文本
+        </Label>
+        <Label dot={{ show: true, color: '#2A9D8F' }} color="#E6505C">
+          标签文本
+        </Label>
+        <Label dot={{ show: true, color: '#2A9D8F' }} color="#FE893B">
+          标签文本
+        </Label>
+        <Label dot={{ show: true, color: '#2A9D8F' }} color="#2A9D8F">
+          标签文本
+        </Label>
+      </Space>
     </Space>
   );
 };
@@ -89,3 +131,16 @@ export default () => {
 | icon | 设置图标 | ReactNode | - |  |  |
 | visible | 是否显示标签 | boolean | true |  |  |
 | onClose | 关闭时的回调（可通过 `e.preventDefault()` 来阻止默认行为） | (e) => void | - |  |  |
+| color | 文字颜色 `backgroundColor` 根据文字颜色透明度 0.1 | hex 色值 | - |  | `0.0.14` |
+| dot | 是否显示小圆点 | boolean \| `DotConfig` | false |  | `0.0.14` |
+
+> <b>Tips</b>: dot 存在时，Label background 则处于透明状态,字体颜色依旧可以通过 color 来控制 <br/> dot color 默认取文字颜色，dot 类型为 DotConfig 时，dot color 取 DotConfig['color']
+
+```typescript
+interface DotConfig {
+  /** dot 是否显示 */
+  show: boolean;
+  /** dot 颜色 */
+  color: '#2A9D8F';
+}
+```
