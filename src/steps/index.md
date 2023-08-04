@@ -23,20 +23,14 @@ export default () => {
   return (
     <Steps current={1} size="default">
       <Step title="Finished" description="This is a description." />
-      <Step
-        title="In Progress"
-        // status="error"
-        subTitle="Left 00:00:08"
-        description="This is a description."
-      />
+      <Step title="In Progress" subTitle="Left 00:00:08" description="This is a description." />
       <Step
         title="In Progress"
         status="error"
-        icon={<ExclamationCircleOutlined style={{ fontSize: 32 }} />}
         subTitle="Left 00:00:08"
         description="This is a description."
       />
-      <Step title="Waiting" description="This is a description." />
+      <Step title="Waiting" description="This is a descriptionss." />
     </Steps>
   );
 };
