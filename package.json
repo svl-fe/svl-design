@@ -87,6 +87,8 @@
   },
   "peerDependencies": {
     "antd": ">=4.17.3",
+    "rc-select": ">=14.0.0",
+    "rc-tree-select": ">=5.0.0",
     "react": ">=16.9.0",
     "react-dom": ">=16.9.0"
   },

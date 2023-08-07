@@ -4,9 +4,9 @@ export default defineConfig({
   // more father config: https://github.com/umijs/father/blob/master/docs/config.md
 
   // esm: { output: 'dist' },
-  cjs: {
-    platform: 'browser',
-  },
+  // cjs: {
+  //   platform: 'browser',
+  // },
   esm: {
     transformer: 'babel',
     alias: { 'antd/lib': 'antd/es' },
