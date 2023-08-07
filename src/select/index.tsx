@@ -1,14 +1,13 @@
-import * as React from 'react';
-import { Select as ASelect } from 'antd';
 import type { SelectProps } from 'antd';
+import { Select as ASelect } from 'antd';
 import { BaseOptionType, DefaultOptionType } from 'antd/lib/select';
 import { BaseSelectRef } from 'rc-select';
+import * as React from 'react';
 import { PullDown } from '../const';
 
+const { OptGroup, Option, SECRET_COMBOBOX_MODE_DO_NOT_USE } = ASelect as any;
+
 export type { SelectProps };
-
-const { OptGroup, Option, SECRET_COMBOBOX_MODE_DO_NOT_USE } = ASelect;
-
 export { OptGroup, Option };
 const SelectR: React.FC<SelectProps> = (props) => {
   const { suffixIcon = PullDown, ...rest } = props;

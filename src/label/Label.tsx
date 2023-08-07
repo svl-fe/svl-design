@@ -1,10 +1,10 @@
+import classNames from 'classnames';
 import * as React from 'react';
 import { useEffect } from 'react';
-import classNames from 'classnames';
 import { Close } from '../const';
 
-import './style/index.less';
 import { hex2rgba } from '../utils';
+import './style/index.less';
 
 interface DotConfig {
   show: boolean;
@@ -107,9 +107,15 @@ export const Label: React.FC<LabelProps> = (props) => {
   return (
     <span
       className={labelCls}
-      style={{ color, background: dotVisible ? 'transparent' : hex2rgba(color, 0.1), ...style }}
+      style={{
+        color,
+        background: dotVisible ? 'transparent' : hex2rgba(color, 0.1),
+        ...style,
+      }}
     >
-      {dotVisible && <i style={{ color: typeof dot !== 'boolean' ? dot?.color : '' }}></i>}
+      {dotVisible && (
+        <i style={{ color: typeof dot !== 'boolean' ? dot?.color : '' }}></i>
+      )}
       {icon || null}
       {children}
       {renderCloseIcon()}

@@ -1,6 +1,5 @@
-import * as React from 'react';
-import { Checkbox } from 'antd';
 import type { CheckboxProps } from 'antd';
+import { Checkbox } from 'antd';
 
 import './style/index.less';
 

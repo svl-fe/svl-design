@@ -1,0 +1,14 @@
+{
+  "extends": "@umijs/lint/dist/config/stylelint",
+  "rules": {
+    "function-no-unknown": [
+      true,
+      {
+        "ignoreFunctions": [
+          "fade",
+          "average"
+        ]
+      }
+    ]
+  }
+}

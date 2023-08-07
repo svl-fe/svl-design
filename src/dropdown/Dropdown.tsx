@@ -1,7 +1,8 @@
+import { DropDownProps as ADropDownProps, Dropdown as ADropdown } from 'antd';
+import DropdownButton, {
+  DropdownButtonProps,
+} from 'antd/lib/dropdown/dropdown-button';
 import * as React from 'react';
-import { Dropdown as ADropdown } from 'antd';
-import type { DropDownProps as ADropDownProps } from 'antd';
-import DropdownButton, { DropdownButtonProps } from 'antd/lib/dropdown/dropdown-button';
 
 import './style/index.less';
 
@@ -19,7 +20,11 @@ export const Dropdown: DropDownProps = (props) => {
 };
 
 const DropButton: DropdownButtonInterface = (props) => {
-  const { icon = <div className="svl-dropdown-icon"></div>, children, ...rest } = props;
+  const {
+    icon = <div className="svl-dropdown-icon"></div>,
+    children,
+    ...rest
+  } = props;
 
   return (
     <ADropdown.Button icon={icon} {...rest}>

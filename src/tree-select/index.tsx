@@ -1,21 +1,19 @@
-import * as React from 'react';
-import { TreeSelect as ATreeSelect } from 'antd';
-import type { TreeSelectProps } from 'antd';
+import { TreeSelect as ATreeSelect, TreeSelectProps } from 'antd';
 import { BaseOptionType, DefaultOptionType } from 'antd/lib/select';
-import type { BaseSelectRef } from 'rc-select';
+import { BaseSelectRef } from 'rc-select';
+import * as React from 'react';
 import { PullDown } from '../const';
 
-const { TreeNode, SHOW_ALL, SHOW_CHILD, SHOW_PARENT } = ATreeSelect;
+const { TreeNode, SHOW_ALL, SHOW_CHILD, SHOW_PARENT } = ATreeSelect as any;
 
 export type { TreeSelectProps };
+export { TreeNode, SHOW_ALL, SHOW_PARENT, SHOW_CHILD };
 
 const TreeSelectR: React.FC<TreeSelectProps> = (props) => {
   const { suffixIcon = PullDown, ...rest } = props;
 
   return <ATreeSelect suffixIcon={suffixIcon} {...rest} />;
 };
-
-export { TreeNode, SHOW_ALL, SHOW_PARENT, SHOW_CHILD };
 
 const TreeSelect = TreeSelectR as (<
   ValueType = any,

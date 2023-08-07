@@ -1,8 +1,7 @@
-import * as React from 'react';
-import { Alert as AAlert } from 'antd';
-import type { AlertProps as AAlertProps } from 'antd';
-import classNames from 'classnames';
+import { Alert as AAlert, AlertProps as AAlertProps } from 'antd';
 import ErrorBoundary from 'antd/lib/alert/ErrorBoundary';
+import classNames from 'classnames';
+import * as React from 'react';
 
 import './style/index.less';
 

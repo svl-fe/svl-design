@@ -1,11 +1,10 @@
-import * as React from 'react';
-import { Button as AButton } from 'antd';
-import type { ButtonProps as AButtonProps } from 'antd';
+import { Button as AButton, ButtonProps as AButtonProps } from 'antd';
 import classNames from 'classnames';
+import * as React from 'react';
 
 import './style/index.less';
 
-interface ButtonProps extends AButtonProps {}
+type ButtonProps = AButtonProps;
 
 export const Button: React.FC<ButtonProps> = (props) => {
   const { className, children, ...rest } = props;
