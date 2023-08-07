@@ -1,10 +1,14 @@
-import * as React from 'react';
-import { Button, Drawer as ADrawer, Space } from 'antd';
-import type { DrawerProps as ADrawerProps } from 'antd';
+import {
+  Drawer as ADrawer,
+  DrawerProps as ADrawerProps,
+  Button,
+  Space,
+} from 'antd';
 import classNames from 'classnames';
+import * as React from 'react';
 
-import './style/index.less';
 import { Close } from '../const';
+import './style/index.less';
 
 interface DrawerProps extends ADrawerProps {
   /** 标题名字 */
@@ -50,7 +54,12 @@ export const Drawer: React.FC<DrawerProps> = (props) => {
         <Button size="large" onClick={handleClose}>
           取消
         </Button>
-        <Button size="large" onClick={handleOk} type="primary" loading={loading}>
+        <Button
+          size="large"
+          onClick={handleOk}
+          type="primary"
+          loading={loading}
+        >
           完成
         </Button>
       </Space>

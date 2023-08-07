@@ -1,6 +1,8 @@
+import {
+  Popconfirm as APopconfirm,
+  PopconfirmProps as APopconfirmProps,
+} from 'antd';
 import * as React from 'react';
-import { Popconfirm as APopconfirm } from 'antd';
-import type { PopconfirmProps as APopconfirmProps } from 'antd';
 
 import './style/index.less';
 

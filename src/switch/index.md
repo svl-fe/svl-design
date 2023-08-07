@@ -6,6 +6,7 @@ group:
   # path: /components
   title: 数据录入
   order: 4
+toc: false
 ---
 
 ## Switch 开关
@@ -20,10 +21,20 @@ export default () => {
   return (
     <div>
       <div style={{ marginBottom: 10 }}>
-        <Switch checkedChildren="启用" unCheckedChildren="禁用" size="large" defaultChecked />
+        <Switch
+          checkedChildren="启用"
+          unCheckedChildren="禁用"
+          size="large"
+          defaultChecked
+        />
       </div>
       <div style={{ marginBottom: 10 }}>
-        <Switch checkedChildren="启用" unCheckedChildren="禁用" size="large" defaultChecked />
+        <Switch
+          checkedChildren="启用"
+          unCheckedChildren="禁用"
+          size="large"
+          defaultChecked
+        />
       </div>
       <div style={{ marginBottom: 10 }}>
         <Switch
@@ -60,6 +71,6 @@ export default () => {
 
 #### 参数说明
 
-| 属性 | 说明 | 类型 | 默认值 | 是否必传 | 版本 |
-| --- | --- | --- | --- | --- | --- |
-| size | 继承自[Switch size](https://4x.ant.design/components/switch-cn/#Switch),新增 `large` | - | default | - | `0.0.12` |
+| 属性 | 说明                                                                                 | 类型 | 默认值  | 是否必传 | 版本     |
+| ---- | ------------------------------------------------------------------------------------ | ---- | ------- | -------- | -------- |
+| size | 继承自[Switch size](https://4x.ant.design/components/switch-cn/#Switch),新增 `large` | -    | default | -        | `0.0.12` |

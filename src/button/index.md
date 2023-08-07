@@ -6,6 +6,7 @@ group:
   # path: /components
   title: 通用
   order: 0
+toc: false
 ---
 
 ## Button 按钮

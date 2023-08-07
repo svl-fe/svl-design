@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unknown-property */
 import React from 'react';
 
 export const Close = (
@@ -19,7 +20,13 @@ export const Close = (
 );
 
 export const PullDown = (
-  <svg width="1em" height="1em" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <svg
+    width="1em"
+    height="1em"
+    viewBox="0 0 16 16"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
     <g clip-path="url(#a)">
       <path
         data-follow-fill="currentColor"
@@ -38,7 +45,13 @@ export const PullDown = (
 );
 
 export const Right = (
-  <svg width="1em" height="1em" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <svg
+    width="1em"
+    height="1em"
+    viewBox="0 0 16 16"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
     <path
       data-follow-fill="currentColor"
       fill-rule="evenodd"

@@ -6,6 +6,7 @@ group:
   # path: /components
   title: 导航
   order: 2
+toc: false
 ---
 
 ## Steps 步骤条
@@ -25,18 +26,16 @@ export default () => {
       <Step title="Finished" description="This is a description." />
       <Step
         title="In Progress"
-        // status="error"
         subTitle="Left 00:00:08"
         description="This is a description."
       />
       <Step
         title="In Progress"
         status="error"
-        icon={<ExclamationCircleOutlined style={{ fontSize: 32 }} />}
         subTitle="Left 00:00:08"
         description="This is a description."
       />
-      <Step title="Waiting" description="This is a description." />
+      <Step title="Waiting" description="This is a descriptionss." />
     </Steps>
   );
 };

@@ -6,6 +6,7 @@ group:
   # path: /components
   title: 数据展示
   order: 4
+toc: false
 ---
 
 ## Tabs 标签页
@@ -46,6 +47,6 @@ export default () => {
 
 #### 参数说明
 
-| 属性 | 说明 | 类型 | 默认值 | 是否必传 | 版本 |
-| --- | --- | --- | --- | --- | --- |
-| type | 继承自[Tabs type](https://4x.ant.design/components/tabs-cn/#Tabs),新增 radius-card | 'line' \| 'card' \| 'editable-card' \| 'radius-card' | 'line' |  |  |
+| 属性 | 说明                                                                               | 类型                                                 | 默认值 | 是否必传 | 版本 |
+| ---- | ---------------------------------------------------------------------------------- | ---------------------------------------------------- | ------ | -------- | ---- |
+| type | 继承自[Tabs type](https://4x.ant.design/components/tabs-cn/#Tabs),新增 radius-card | 'line' \| 'card' \| 'editable-card' \| 'radius-card' | 'line' |          |      |

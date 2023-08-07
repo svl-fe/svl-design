@@ -1,11 +1,12 @@
 ---
 nav:
-  title: 组件
+  title: Alertsdfsdfsf
   path: /components
 group:
   # path: /components
   title: 反馈
   order: 5
+toc: false
 ---
 
 ## Alert 警告提示

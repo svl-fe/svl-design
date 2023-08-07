@@ -1,11 +1,10 @@
-import * as React from 'react';
-import { Tabs as ATabs } from 'antd';
-import type { TabsProps as ATabsProps } from 'antd';
+import { Tabs as ATabs, TabsProps as ATabsProps } from 'antd';
 import classNames from 'classnames';
+import * as React from 'react';
 
-import './style/index.less';
 import TabPane, { TabPaneProps } from 'antd/lib/tabs/TabPane';
-export { TabPaneProps };
+import './style/index.less';
+export type { TabPaneProps };
 export interface TabsProps extends Omit<ATabsProps, 'type'> {
   /** radius-card */
   type?: ATabsProps['type'] | 'radius-card';
@@ -20,7 +19,9 @@ const Tabs: React.FC<TabsProps> = (props) => {
   } else {
     typeProps = 'card';
   }
-  const TabsCls = classNames('svl-tabs', className, { 'svl-radius-tabs': selfType });
+  const TabsCls = classNames('svl-tabs', className, {
+    'svl-radius-tabs': selfType,
+  });
 
   return <ATabs className={TabsCls} type={typeProps} {...rest}></ATabs>;
 };

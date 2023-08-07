@@ -6,6 +6,7 @@ group:
   # path: /components
   title: 反馈
   order: 5
+toc: false
 ---
 
 ## Modal 对话框

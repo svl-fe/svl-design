@@ -12,11 +12,20 @@ const Switch: React.FC<SwitchProps> = (props) => {
   const { size = 'default', className, ...rest } = props;
 
   const SwitchClass = useMemo(
-    () => classNames('svl-switch', className, { 'svl-switch-large': size === 'large' }),
+    () =>
+      classNames('svl-switch', className, {
+        'svl-switch-large': size === 'large',
+      }),
     [size, className],
   );
 
-  return <ASwitch size={size === 'large' ? 'default' : size} className={SwitchClass} {...rest} />;
+  return (
+    <ASwitch
+      size={size === 'large' ? 'default' : size}
+      className={SwitchClass}
+      {...rest}
+    />
+  );
 };
 
 export default Switch;

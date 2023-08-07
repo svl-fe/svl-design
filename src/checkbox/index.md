@@ -6,6 +6,7 @@ group:
   # path: /components
   title: 数据录入
   order: 3
+toc: false
 ---
 
 ## Checkbox 多选框
@@ -41,12 +42,20 @@ export default () => {
 
   return (
     <>
-      <Checkbox indeterminate={indeterminate} onChange={onCheckAllChange} checked={checkAll}>
+      <Checkbox
+        indeterminate={indeterminate}
+        onChange={onCheckAllChange}
+        checked={checkAll}
+      >
         Check all
       </Checkbox>
       <Checkbox>Check all</Checkbox>
       <br />
-      <CheckboxGroup options={plainOptions} value={checkedList} onChange={onChange} />
+      <CheckboxGroup
+        options={plainOptions}
+        value={checkedList}
+        onChange={onChange}
+      />
       <br />
       <Checkbox disabled>disabled</Checkbox>
       <br />
@@ -54,36 +63,6 @@ export default () => {
         checked disabled
       </Checkbox>
       <br />
-      <Space>
-        <Switch defaultChecked />
-        <Switch size="small" defaultChecked />
-        <Switch defaultChecked disabled />
-        <Switch size="small" defaultChecked disabled />
-      </Space>
-      <br />
-      <Space>
-        <Radio>未选中</Radio>
-        <Radio defaultChecked>已选中</Radio>
-        <Radio disabled>未选失效项</Radio>
-        <Radio defaultChecked disabled>
-          已经选失效项
-        </Radio>
-      </Space>
-      <br />
-      <Tabs defaultActiveKey="1">
-        <TabPane tab="Tab 1" key="1">
-          Content of Tab Pane 1
-        </TabPane>
-        <TabPane tab="Tab 2" key="2">
-          Content of Tab Pane 2
-        </TabPane>
-        <TabPane tab="Tab 3" key="3">
-          Content of Tab Pane 3
-        </TabPane>
-      </Tabs>
-      <Tooltip title="prompt text">
-        <span>Tooltip will show on mouse enter.</span>
-      </Tooltip>
     </>
   );
 };

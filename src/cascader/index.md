@@ -6,6 +6,7 @@ group:
   # path: /components
   title: 数据录入
   order: 3
+toc: false
 ---
 
 ## Cascader 级联选择
