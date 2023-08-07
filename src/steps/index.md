@@ -22,21 +22,56 @@ const { Step } = Steps;
 
 export default () => {
   return (
-    <Steps current={1} size="default">
-      <Step title="Finished" description="This is a description." />
-      <Step
-        title="In Progress"
-        subTitle="Left 00:00:08"
-        description="This is a description."
-      />
-      <Step
-        title="In Progress"
-        status="error"
-        subTitle="Left 00:00:08"
-        description="This is a description."
-      />
-      <Step title="Waiting" description="This is a descriptionss." />
-    </Steps>
+    <>
+      <h3>small steps</h3>
+      <Steps current={1} size="small">
+        <Step title="Finished" description="This is a description." />
+        <Step
+          title="In Progress"
+          subTitle="Left 00:00:08"
+          description="This is a description."
+        />
+        <Step
+          title="In Progress"
+          status="error"
+          subTitle="Left 00:00:08"
+          description="This is a description."
+        />
+        <Step title="Waiting" description="This is a descriptionss." />
+      </Steps>
+      <h3>default steps</h3>
+      <Steps current={1} size="default">
+        <Step title="Finished" description="This is a description." />
+        <Step
+          title="In Progress"
+          subTitle="Left 00:00:08"
+          description="This is a description."
+        />
+        <Step
+          title="In Progress"
+          status="error"
+          subTitle="Left 00:00:08"
+          description="This is a description."
+        />
+        <Step title="Waiting" description="This is a descriptionss." />
+      </Steps>
+      <h3>large steps</h3>
+      <Steps current={1} size="large">
+        <Step title="Finished" description="This is a description." />
+        <Step
+          title="In Progress"
+          subTitle="Left 00:00:08"
+          description="This is a description."
+        />
+        <Step
+          title="In Progress"
+          status="error"
+          subTitle="Left 00:00:08"
+          description="This is a description."
+        />
+        <Step title="Waiting" description="This is a descriptionss." />
+      </Steps>
+    </>
   );
 };
 ```
