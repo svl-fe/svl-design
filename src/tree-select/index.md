@@ -6,6 +6,7 @@ group:
   # path: /components
   title: 数据录入
   order: 3
+toc: false
 ---
 
 ## TreeSelect 树选择
@@ -43,7 +44,10 @@ export default () => {
             <TreeNode value="leaf2" title="leaf2" />
           </TreeNode>
           <TreeNode value="parent 1-1" title="parent 1-1">
-            <TreeNode value="leaf3" title={<b style={{ color: '#08c' }}>leaf3</b>} />
+            <TreeNode
+              value="leaf3"
+              title={<b style={{ color: '#08c' }}>leaf3</b>}
+            />
           </TreeNode>
         </TreeNode>
       </TreeSelect>

@@ -6,6 +6,7 @@ group:
   # path: /components
   title: 数据展示
   order: 4
+toc: false
 ---
 
 ## Label 标签
@@ -98,7 +99,11 @@ export default () => {
         </Label>
       </Space>
       <Space direction="vertical">
-        <Label dot={{ show: true, color: '#2A9D8F' }} color="#969799" size="small">
+        <Label
+          dot={{ show: true, color: '#2A9D8F' }}
+          color="#969799"
+          size="small"
+        >
           标签文本
         </Label>
         <Label dot={{ show: true, color: '#2A9D8F' }} color="#E6505C">
@@ -118,21 +123,21 @@ export default () => {
 
 #### 参数说明
 
-| 属性 | 说明 | 类型 | 默认值 | 是否必传 | 版本 |
-| --- | --- | --- | --- | --- | --- |
-| type | 类型 | 'line' \| 'face' \| 'ghost' | 'line' |  |  |
-| size | 标签大小 | 'small' \| 'middle' \| 'large' | 'middle' |  |  |
-| status | 标签状态 | 'success' \| 'error' \| 'warning' \| 'default' | 'default' |  |  |
-| className | 类名 | string | - |  |  |
-| style | 样式 | React.CSSProperties | - |  |  |
-| children | 子组件 | ReactNode | - |  |  |
-| closable | 标签是否可以关闭（点击默认关闭） | boolean | false |  |  |
-| closeIcon | 自定义关闭按钮 | ReactNode | - |  |  |
-| icon | 设置图标 | ReactNode | - |  |  |
-| visible | 是否显示标签 | boolean | true |  |  |
-| onClose | 关闭时的回调（可通过 `e.preventDefault()` 来阻止默认行为） | (e) => void | - |  |  |
-| color | 文字颜色 `backgroundColor` 根据文字颜色透明度 0.1 | hex 色值 | - |  | `0.0.14` |
-| dot | 是否显示小圆点 | boolean \| `DotConfig` | false |  | `0.0.14` |
+| 属性      | 说明                                                       | 类型                                           | 默认值    | 是否必传 | 版本     |
+| --------- | ---------------------------------------------------------- | ---------------------------------------------- | --------- | -------- | -------- |
+| type      | 类型                                                       | 'line' \| 'face' \| 'ghost'                    | 'line'    |          |          |
+| size      | 标签大小                                                   | 'small' \| 'middle' \| 'large'                 | 'middle'  |          |          |
+| status    | 标签状态                                                   | 'success' \| 'error' \| 'warning' \| 'default' | 'default' |          |          |
+| className | 类名                                                       | string                                         | -         |          |          |
+| style     | 样式                                                       | React.CSSProperties                            | -         |          |          |
+| children  | 子组件                                                     | ReactNode                                      | -         |          |          |
+| closable  | 标签是否可以关闭（点击默认关闭）                           | boolean                                        | false     |          |          |
+| closeIcon | 自定义关闭按钮                                             | ReactNode                                      | -         |          |          |
+| icon      | 设置图标                                                   | ReactNode                                      | -         |          |          |
+| visible   | 是否显示标签                                               | boolean                                        | true      |          |          |
+| onClose   | 关闭时的回调（可通过 `e.preventDefault()` 来阻止默认行为） | (e) => void                                    | -         |          |          |
+| color     | 文字颜色 `backgroundColor` 根据文字颜色透明度 0.1          | hex 色值                                       | -         |          | `0.0.14` |
+| dot       | 是否显示小圆点                                             | boolean \| `DotConfig`                         | false     |          | `0.0.14` |
 
 > <b>Tips</b>: dot 存在时，Label background 则处于透明状态,字体颜色依旧可以通过 color 来控制 <br/> dot color 默认取文字颜色，dot 类型为 DotConfig 时，dot color 取 DotConfig['color']
 

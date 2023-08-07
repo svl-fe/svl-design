@@ -1,10 +1,15 @@
 import { TreeSelect as ATreeSelect, TreeSelectProps } from 'antd';
-import { BaseOptionType, DefaultOptionType } from 'antd/lib/select';
-import { BaseSelectRef } from 'rc-select';
+
+import type { BaseSelectRef } from 'rc-select';
 import * as React from 'react';
 import { PullDown } from '../const';
+import type {
+  BaseOptionType,
+  DefaultOptionType,
+} from 'rc-tree-select/lib/TreeSelect';
+import { TreeNode } from 'antd/lib/tree-select';
 
-const { TreeNode, SHOW_ALL, SHOW_CHILD, SHOW_PARENT } = ATreeSelect as any;
+const { SHOW_ALL, SHOW_CHILD, SHOW_PARENT } = ATreeSelect;
 
 export type { TreeSelectProps };
 export { TreeNode, SHOW_ALL, SHOW_PARENT, SHOW_CHILD };

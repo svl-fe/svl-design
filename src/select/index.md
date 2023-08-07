@@ -6,6 +6,7 @@ group:
   # path: /components
   title: 数据录入
   order: 3
+toc: false
 ---
 
 ## Select 选择器
@@ -25,7 +26,11 @@ export default () => {
 
   return (
     <>
-      <Select defaultValue="lucy" style={{ width: 200 }} onChange={handleChange}>
+      <Select
+        defaultValue="lucy"
+        style={{ width: 200 }}
+        onChange={handleChange}
+      >
         <OptGroup label="Manager">
           <Option value="jack">Jack</Option>
           <Option value="lucy">Lucy</Option>

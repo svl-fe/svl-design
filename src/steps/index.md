@@ -6,6 +6,7 @@ group:
   # path: /components
   title: 导航
   order: 2
+toc: false
 ---
 
 ## Steps 步骤条
@@ -23,7 +24,11 @@ export default () => {
   return (
     <Steps current={1} size="default">
       <Step title="Finished" description="This is a description." />
-      <Step title="In Progress" subTitle="Left 00:00:08" description="This is a description." />
+      <Step
+        title="In Progress"
+        subTitle="Left 00:00:08"
+        description="This is a description."
+      />
       <Step
         title="In Progress"
         status="error"

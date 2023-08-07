@@ -6,6 +6,7 @@ group:
   # path: /components
   title: 导航
   order: 2
+toc: false
 ---
 
 ## Dropdown 下拉菜单
