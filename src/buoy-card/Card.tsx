@@ -11,10 +11,19 @@ export interface BuoyCardProps extends HTMLAttributes<HTMLDivElement> {
   text?: string;
   children?: React.ReactNode;
   buoyClassName?: string;
+  contentClassName?: string;
 }
 
 export const BuoyCard: React.FC<BuoyCardProps> = (props) => {
-  const { color, text, children, className, buoyClassName, ...rest } = props;
+  const {
+    color,
+    text,
+    children,
+    className,
+    buoyClassName,
+    contentClassName,
+    ...rest
+  } = props;
 
   const textLength = useMemo(() => text?.length || 0, [text]);
 
@@ -40,7 +49,9 @@ export const BuoyCard: React.FC<BuoyCardProps> = (props) => {
           </span>
         </div>
       )}
-      <div className="buoy-card-content">{children}</div>
+      <div className={classNames(contentClassName, 'buoy-card-content')}>
+        {children}
+      </div>
     </div>
   );
 };
