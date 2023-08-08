@@ -1,0 +1,157 @@
+{
+  "menus": {
+    "en-US": {
+      "/components": [
+        {
+          "title": "通用",
+          "meta": {
+            "order": 0,
+            "__fallback": true
+          },
+          "children": [
+            {
+              "path": "/components/button",
+              "title": "Button 按钮",
+              "meta": {}
+            }
+          ]
+        },
+        {
+          "title": "导航",
+          "meta": {
+            "order": 2,
+            "__fallback": true
+          },
+          "children": [
+            {
+              "path": "/components/dropdown",
+              "title": "Dropdown 下拉菜单",
+              "meta": {}
+            },
+            {
+              "path": "/components/steps",
+              "title": "Steps 步骤条",
+              "meta": {}
+            }
+          ]
+        },
+        {
+          "title": "数据录入",
+          "meta": {
+            "order": 3,
+            "__fallback": true
+          },
+          "children": [
+            {
+              "path": "/components/cascader",
+              "title": "Cascader 级联选择",
+              "meta": {}
+            },
+            {
+              "path": "/components/checkbox",
+              "title": "Checkbox 多选框",
+              "meta": {}
+            },
+            {
+              "path": "/components/select",
+              "title": "Select 选择器",
+              "meta": {}
+            },
+            {
+              "path": "/components/switch",
+              "title": "Switch 开关",
+              "meta": {}
+            },
+            {
+              "path": "/components/tree-select",
+              "title": "TreeSelect 树选择",
+              "meta": {}
+            }
+          ]
+        },
+        {
+          "title": "数据展示",
+          "meta": {
+            "order": 4,
+            "__fallback": true
+          },
+          "children": [
+            {
+              "path": "/components/buoy-card",
+              "title": "BuoyCard 浮标卡片",
+              "meta": {}
+            },
+            {
+              "path": "/components/label",
+              "title": "Label 标签",
+              "meta": {}
+            },
+            {
+              "path": "/components/tabs",
+              "title": "Tabs 标签页",
+              "meta": {}
+            }
+          ]
+        },
+        {
+          "title": "反馈",
+          "meta": {
+            "order": 5,
+            "__fallback": true
+          },
+          "children": [
+            {
+              "path": "/components/alert",
+              "title": "Alert 警告提示",
+              "meta": {}
+            },
+            {
+              "path": "/components/drawer",
+              "title": "Drawer 抽屉",
+              "meta": {}
+            },
+            {
+              "path": "/components/modal",
+              "title": "Modal 对话框",
+              "meta": {}
+            },
+            {
+              "path": "/components/popconfirm",
+              "title": "Popconfirm 气泡确认框",
+              "meta": {}
+            }
+          ]
+        }
+      ],
+      "*": [
+        {
+          "path": "/",
+          "title": "Index",
+          "meta": {}
+        }
+      ]
+    }
+  },
+  "locales": [
+    {
+      "name": "en-US",
+      "label": "English"
+    }
+  ],
+  "navs": {
+    "en-US": [
+      {
+        "title": "组件",
+        "path": "/components"
+      }
+    ]
+  },
+  "title": "svl-design",
+  "logo": "https://user-images.githubusercontent.com/9554297/83762004-a0761b00-a6a9-11ea-83b4-9c8ff721d4b8.png",
+  "mode": "site",
+  "repository": {
+    "url": "https://github.com/svl-fe/svl-design",
+    "branch": "master"
+  },
+  "theme": {}
+}
