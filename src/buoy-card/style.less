@@ -1,0 +1,44 @@
+.buoy-card {
+  position: relative;
+  min-height: 100px;
+
+  &-img {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+
+    &__icon {
+      position: absolute;
+      left: 0;
+      bottom: 7px;
+      font-size: 114px;
+      color: #c8c9cc;
+      transform: rotate(330deg);
+    }
+
+    &__text {
+      position: absolute;
+      left: 0;
+      bottom: 7px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      width: 114px;
+      height: 114px;
+      transform: rotate(330deg);
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 30px;
+      color: #c8c9cc;
+    }
+  }
+
+  &-content {
+    position: relative;
+    z-index: 2;
+  }
+}

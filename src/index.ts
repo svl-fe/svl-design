@@ -1,5 +1,7 @@
 export { default as Alert } from './alert';
 export type { AlertProps } from './alert';
+export { default as BuoyCard } from './buoy-card';
+export type { BuoyCardProps } from './buoy-card';
 export { default as Button } from './button';
 export type { ButtonProps } from './button';
 export { default as Cascader } from './cascader';
