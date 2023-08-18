@@ -12,13 +12,17 @@ export { OptGroup, Option };
 const { SECRET_COMBOBOX_MODE_DO_NOT_USE } = AntSelect;
 const PlullDownSvg = <Icon component={pullDownSvg} className='svl-select-pull-down-icon'/>
 
-const SelectR: React.FC<SelectProps> = (props) => {
-  const { suffixIcon =  PlullDownSvg, ...rest } = props;
+const SelectR = <
+  ValueType = any,
+  OptionType extends BaseOptionType | DefaultOptionType = DefaultOptionType,
+>({
+  suffixIcon =  PlullDownSvg, ...props 
+}: SelectProps<ValueType, OptionType>, ref: React.Ref<BaseSelectRef>) => {
 
-  return <AntSelect suffixIcon={suffixIcon} {...rest} />;
+  return <AntSelect ref={ref} suffixIcon={suffixIcon} {...props} />;
 };
 
-const Select = SelectR as (<
+const Select = React.forwardRef(SelectR) as unknown as (<
   ValueType = any,
   OptionType extends BaseOptionType | DefaultOptionType = DefaultOptionType,
 >(
