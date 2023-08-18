@@ -1,25 +1,29 @@
-import * as React from 'react';
-import { Select as AntSelect, SelectProps } from 'antd';
 import Icon from '@ant-design/icons';
+import { Select as AntSelect, SelectProps } from 'antd';
 import { BaseOptionType, DefaultOptionType } from 'antd/lib/select';
 import { BaseSelectRef, OptGroup, Option } from 'rc-select';
-import { ReactComponent as pullDownSvg } from '../svg/icon-pulldown.svg'
+import * as React from 'react';
+import { ReactComponent as pullDownSvg } from '../svg/icon-pulldown.svg';
 import './style/index.less';
 
 export type { SelectProps };
 export { OptGroup, Option };
 
 const { SECRET_COMBOBOX_MODE_DO_NOT_USE } = AntSelect;
-const PlullDownSvg = <Icon component={pullDownSvg} className='svl-select-pull-down-icon'/>
+const PlullDownSvg = (
+  <Icon component={pullDownSvg} className="svl-select-pull-down-icon" />
+);
 
 const SelectR = <
   ValueType = any,
   OptionType extends BaseOptionType | DefaultOptionType = DefaultOptionType,
->({
-  suffixIcon =  PlullDownSvg, ...props 
-}: SelectProps<ValueType, OptionType>, ref: React.Ref<BaseSelectRef>) => {
-
-  return <AntSelect ref={ref} suffixIcon={suffixIcon} {...props} />;
+>(
+  { suffixIcon, ...props }: SelectProps<ValueType, OptionType>,
+  ref: React.Ref<BaseSelectRef>,
+) => {
+  return (
+    <AntSelect ref={ref} suffixIcon={suffixIcon || PlullDownSvg} {...props} />
+  );
 };
 
 const Select = React.forwardRef(SelectR) as unknown as (<
