@@ -1,21 +1,23 @@
-import { TreeSelect as ATreeSelect, TreeSelectProps } from 'antd';
-
-import type { BaseSelectRef } from 'rc-select';
 import * as React from 'react';
-import { PullDown } from '../const';
+import { TreeSelect as ATreeSelect, TreeSelectProps } from 'antd';
+import { TreeNode } from 'antd/lib/tree-select';
+import Icon from '@ant-design/icons';
+import type { BaseSelectRef } from 'rc-select';
 import type {
   BaseOptionType,
   DefaultOptionType,
 } from 'rc-tree-select/lib/TreeSelect';
-import { TreeNode } from 'antd/lib/tree-select';
-
-const { SHOW_ALL, SHOW_CHILD, SHOW_PARENT } = ATreeSelect;
+import { ReactComponent as pullDownSvg } from '../svg/icon-pulldown.svg'
+import './style/index.less'
 
 export type { TreeSelectProps };
 export { TreeNode, SHOW_ALL, SHOW_PARENT, SHOW_CHILD };
 
+const { SHOW_ALL, SHOW_CHILD, SHOW_PARENT } = ATreeSelect;
+const PlullDownSvg = <Icon component={pullDownSvg} className='svl-tree-select-pull-down-icon' />
+
 const TreeSelectR: React.FC<TreeSelectProps> = (props) => {
-  const { suffixIcon = PullDown, ...rest } = props;
+  const { suffixIcon = PlullDownSvg, ...rest } = props;
 
   return <ATreeSelect suffixIcon={suffixIcon} {...rest} />;
 };

@@ -1,14 +1,19 @@
 import * as React from 'react';
 import { Select as AntSelect, SelectProps } from 'antd';
+import Icon from '@ant-design/icons';
 import { BaseOptionType, DefaultOptionType } from 'antd/lib/select';
 import { BaseSelectRef, OptGroup, Option } from 'rc-select';
-import { PullDown } from '../const';
+import { ReactComponent as pullDownSvg } from '../svg/icon-pulldown.svg'
+import './style/index.less';
 
-const { SECRET_COMBOBOX_MODE_DO_NOT_USE } = AntSelect;
 export type { SelectProps };
 export { OptGroup, Option };
+
+const { SECRET_COMBOBOX_MODE_DO_NOT_USE } = AntSelect;
+const PlullDownSvg = <Icon component={pullDownSvg} className='svl-select-pull-down-icon'/>
+
 const SelectR: React.FC<SelectProps> = (props) => {
-  const { suffixIcon = PullDown, ...rest } = props;
+  const { suffixIcon =  PlullDownSvg, ...rest } = props;
 
   return <AntSelect suffixIcon={suffixIcon} {...rest} />;
 };
