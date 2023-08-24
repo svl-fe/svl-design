@@ -8,7 +8,7 @@
     "esModuleInterop": true,
     "jsx": "react",
     "baseUrl": "./",
-    "types": ["./typings.d.ts"],
+    "types": ["./typings.d.ts", "jest"],
     "paths": {
       "@@/*": [".dumi/tmp/*"],
       "svl-design": ["src"],
