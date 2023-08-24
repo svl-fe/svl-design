@@ -18,10 +18,12 @@ const SelectR = <
   ValueType = any,
   OptionType extends BaseOptionType | DefaultOptionType = DefaultOptionType,
 >(
-  { suffixIcon = PlullDownSvg, ...props }: SelectProps<ValueType, OptionType>,
+  { suffixIcon, ...props }: SelectProps<ValueType, OptionType>,
   ref: React.Ref<BaseSelectRef>,
 ) => {
-  return <AntSelect ref={ref} suffixIcon={suffixIcon} {...props} />;
+  return (
+    <AntSelect ref={ref} suffixIcon={suffixIcon || PlullDownSvg} {...props} />
+  );
 };
 
 const Select = React.forwardRef(SelectR) as unknown as (<
