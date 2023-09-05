@@ -12,6 +12,8 @@ export { default as Drawer } from './drawer';
 export type { DrawerProps } from './drawer';
 export { default as Dropdown } from './dropdown';
 export type { DropDownProps } from './dropdown';
+export { default as Input } from './input';
+export type { InputProps } from './input';
 export { default as Label } from './label';
 export type { LabelProps } from './label';
 export { default as Modal } from './modal';

@@ -1,0 +1,110 @@
+@import '../../style/index';
+
+.ant-input-group-wrapper.ant-input-search {
+  background-color: @disabled-bg;
+  border-radius: 4px;
+
+  .ant-input-affix-wrapper {
+    background-color: @disabled-bg;
+    border: 1px solid @disabled-bg;
+    border-right: none;
+    transition: border 300ms;
+
+    .ant-input {
+      background-color: @disabled-bg;
+    }
+
+    &:hover,
+    &.ant-input-affix-wrapper-focused {
+      box-shadow: none;
+    }
+  }
+
+  .ant-input-search-button {
+    background-color: @disabled-bg;
+    border: 1px solid @disabled-bg;
+    border-left: none;
+    transition: border 300ms;
+    padding: 0 8px;
+
+    &:hover {
+      border-left: none;
+    }
+
+    .anticon-search:hover {
+      color: @primary-color;
+    }
+
+    &[ant-click-animating-without-extra-node='true']::after,
+    .ant-click-animating-node {
+      display: none;
+    }
+  }
+
+  .ant-input-wrapper > .ant-input {
+    border: 1px solid @disabled-bg;
+    transition: border 300ms;
+
+    &:focus {
+      box-shadow: none;
+      border: 1px solid @primary-color;
+      border-right: none;
+
+      + .ant-input-group-addon .ant-input-search-button {
+        border: 1px solid @primary-color;
+        border-left: none;
+      }
+    }
+  }
+
+  &:hover {
+    .ant-input-affix-wrapper,
+    .ant-input-wrapper > .ant-input {
+      border: 1px solid @primary-color;
+      border-right: none;
+    }
+
+    .ant-input-search-button {
+      border: 1px solid @primary-color;
+      border-left: none;
+    }
+  }
+
+  .ant-input-affix-wrapper.ant-input-affix-wrapper-focused {
+    background-color: #fff;
+    border: 1px solid @primary-color;
+    border-right: none;
+
+    .ant-input {
+      background-color: #fff;
+    }
+
+    + .ant-input-group-addon .ant-input-search-button {
+      background-color: #fff;
+      border: 1px solid @primary-color;
+      border-left: none;
+    }
+  }
+
+  .ant-input-clear-icon {
+    font-size: 14px;
+    margin-right: -10px;
+    line-height: 1;
+  }
+
+  .svl-input-search-icon {
+    color: @disabled-color;
+    font-size: 16px;
+
+    &:hover {
+      color: @text-color-secondary;
+    }
+  }
+}
+
+.ant-input-search {
+  .ant-input {
+    background-color: transparent;
+    border: none;
+  }
+}
