@@ -1,6 +1,6 @@
 {
   "name": "svl-design",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "private": false,
   "keywords": [
     "React",
@@ -32,7 +32,8 @@
     "lint:es": "eslint \"{src,test}/**/*.{js,jsx,ts,tsx}\"",
     "prepare": "husky install && dumi setup",
     "prepublishOnly": "father doctor && npm run build",
-    "start": "npm run dev"
+    "start": "npm run dev",
+    "test": "umi-test"
   },
   "commitlint": {
     "extends": [
@@ -83,7 +84,8 @@
     "rc-tree-select": "^5.11.1",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
-    "stylelint": "^14.9.1"
+    "stylelint": "^14.9.1",
+    "umi-test": "^1.9.7"
   },
   "peerDependencies": {
     "antd": ">=4.17.3",
