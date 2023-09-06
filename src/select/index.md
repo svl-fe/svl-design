@@ -14,7 +14,6 @@ toc: false
 示例:
 
 ```tsx
-import React, { useState } from 'react';
 import { Select } from 'svl-design';
 
 const { Option, OptGroup } = Select;
@@ -30,6 +29,7 @@ export default () => {
         defaultValue="lucy"
         style={{ width: 200 }}
         onChange={handleChange}
+        allowClear
       >
         <OptGroup label="Manager">
           <Option value="jack">Jack</Option>
