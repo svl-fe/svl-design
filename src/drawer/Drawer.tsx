@@ -78,7 +78,7 @@ export const Drawer: React.FC<DrawerProps> = (props) => {
       placement={placement}
       closable={closable}
       title={title || dftTitle}
-      footer={footer || dftFooter}
+      footer={footer === null ? null : footer || dftFooter}
       extra={extra || dftExtra}
       onClose={onClose}
       {...rest}

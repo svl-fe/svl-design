@@ -14,8 +14,8 @@ toc: false
 示例:
 
 ```tsx
-import React, { useState } from 'react';
 import { Button } from 'antd';
+import { useState } from 'react';
 import { Drawer } from 'svl-design';
 
 export default () => {
@@ -45,6 +45,7 @@ export default () => {
         titleName="基础抽屉"
         onClose={() => setVisible(false)}
         onOk={onOk}
+        footer={null}
       >
         <p>内容区....</p>
         <p>内容区...</p>
