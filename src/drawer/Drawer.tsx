@@ -15,6 +15,10 @@ interface DrawerProps extends ADrawerProps {
   titleName?: string;
   /** 载入状态 */
   loading?: boolean;
+  /** 取消按钮文字 默认值 取消 */
+  cancelText?: string;
+  /** 确认按钮文字 默认值 完成 */
+  okText?: string;
   /** 点击确定回调 */
   onOk?: (e: React.MouseEvent<HTMLElement>) => void;
 }
@@ -33,6 +37,8 @@ export const Drawer: React.FC<DrawerProps> = (props) => {
     onClose,
     onOk,
     children,
+    okText = '完成',
+    cancelText = '取消',
     ...rest
   } = props;
 
@@ -52,7 +58,7 @@ export const Drawer: React.FC<DrawerProps> = (props) => {
     <div className={'svl-drawer-footer'}>
       <Space>
         <Button size="large" onClick={handleClose}>
-          取消
+          {cancelText}
         </Button>
         <Button
           size="large"
@@ -60,7 +66,7 @@ export const Drawer: React.FC<DrawerProps> = (props) => {
           type="primary"
           loading={loading}
         >
-          完成
+          {okText}
         </Button>
       </Space>
     </div>
