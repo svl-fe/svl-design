@@ -55,3 +55,13 @@ export default () => {
   );
 };
 ```
+
+#### 参数说明
+
+| 属性       | 说明         | 类型                                         | 默认值 | 是否必传 | 版本 |
+| ---------- | ------------ | -------------------------------------------- | ------ | -------- | ---- |
+| titleName  | 标题名字     | string                                       |        | 否       |      |
+| loading    | 载入状态     | boolean                                      |        | 否       |      |
+| cancelText | 取消按钮文字 | string                                       | 取消   | 否       |      |
+| okText     | 确认按钮文字 | string                                       | 完成   | 否       |      |
+| onOk       | 点击确定回调 | (e: React.MouseEvent\<HTMLElement\>) => void |        | 否       |      |
