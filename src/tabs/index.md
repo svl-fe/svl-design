@@ -14,7 +14,6 @@ toc: false
 示例:
 
 ```tsx
-import React from 'react';
 import { Tabs } from 'svl-design';
 
 export default () => {
@@ -36,6 +35,8 @@ export default () => {
     <div>
       <h3>radius-card</h3>
       <Tabs type="radius-card" items={items}></Tabs>
+      <h3>out-radius-card</h3>
+      <Tabs type="out-radius" items={items}></Tabs>
       <h3>card</h3>
       <Tabs type="card" items={items}></Tabs>
       <h3>line</h3>
@@ -47,6 +48,6 @@ export default () => {
 
 #### 参数说明
 
-| 属性 | 说明                                                                               | 类型                                                 | 默认值 | 是否必传 | 版本 |
-| ---- | ---------------------------------------------------------------------------------- | ---------------------------------------------------- | ------ | -------- | ---- |
-| type | 继承自[Tabs type](https://4x.ant.design/components/tabs-cn/#Tabs),新增 radius-card | 'line' \| 'card' \| 'editable-card' \| 'radius-card' | 'line' |          |      |
+| 属性 | 说明                                                                               | 类型                                                                 | 默认值 | 是否必传 | 版本 |
+| ---- | ---------------------------------------------------------------------------------- | -------------------------------------------------------------------- | ------ | -------- | ---- |
+| type | 继承自[Tabs type](https://4x.ant.design/components/tabs-cn/#Tabs),新增 radius-card | 'line' \| 'card' \| 'editable-card' \| 'radius-card' \| 'out-radius' | 'line' |          |      |

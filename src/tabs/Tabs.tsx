@@ -7,20 +7,22 @@ import './style/index.less';
 export type { TabPaneProps };
 export interface TabsProps extends Omit<ATabsProps, 'type'> {
   /** radius-card */
-  type?: ATabsProps['type'] | 'radius-card';
+  type?: ATabsProps['type'] | 'radius-card' | 'out-radius';
 }
 
 const Tabs: React.FC<TabsProps> = (props) => {
   const { className, type, ...rest } = props;
   let typeProps: ATabsProps['type'];
-  const selfType = type === 'radius-card';
-  if (!selfType) {
+  const radiusType = type === 'radius-card';
+  const outRadiusType = type === 'out-radius';
+  if (!(radiusType || outRadiusType)) {
     typeProps = type;
   } else {
     typeProps = 'card';
   }
   const TabsCls = classNames('svl-tabs', className, {
-    'svl-radius-tabs': selfType,
+    'svl-radius-tabs': radiusType,
+    'svl-out-radius-tabs': outRadiusType,
   });
 
   return <ATabs className={TabsCls} type={typeProps} {...rest}></ATabs>;
