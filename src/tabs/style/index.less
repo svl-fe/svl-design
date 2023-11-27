@@ -1,5 +1,8 @@
 @import '../../style/index';
 
+@width: 20px;
+@widthReg: 10px;
+
 .svl-tabs.svl-radius-tabs {
   > .ant-tabs-nav {
     &::before {
@@ -39,6 +42,94 @@
 
       & + .ant-tabs-tab {
         margin-left: 24px;
+      }
+    }
+  }
+}
+
+.svl-tabs.svl-out-radius-tabs {
+  > .ant-tabs-nav {
+    &::before {
+      display: none;
+    }
+  }
+
+  .ant-tabs-nav-wrap {
+    padding: 6px 24px 0;
+    background-color: @disabled-bg;
+  }
+
+  .ant-tabs-tab {
+    background-color: transparent;
+    border: none;
+
+    .ant-tabs-tab-btn::before {
+      position: absolute;
+      width: @widthReg;
+      height: @widthReg;
+      left: 0;
+      background-color: #fff;
+      bottom: 0;
+      z-index: 1;
+    }
+
+    .ant-tabs-tab-btn::after {
+      position: absolute;
+      width: @widthReg;
+      height: @widthReg;
+      right: 0;
+      background-color: #fff;
+      bottom: 0;
+      z-index: 1;
+      transition: none;
+    }
+
+    &::before {
+      position: absolute;
+      background-color: @disabled-bg;
+      left: 0;
+      width: @width;
+      height: @width;
+      border-radius: @width;
+      bottom: 0;
+      z-index: 2;
+      transition: none;
+    }
+
+    &::after {
+      position: absolute;
+      background-color: @disabled-bg;
+      right: 0;
+      width: @width;
+      height: @width;
+      border-radius: @width;
+      bottom: 0;
+      z-index: 2;
+      transition: none;
+    }
+
+    &.ant-tabs-tab-active {
+      border-radius: 20px 20px 0 0;
+      background-color: #fff;
+
+      &::before {
+        content: ' ';
+        left: -@width;
+      }
+
+      &::after {
+        content: ' ';
+        right: -@width;
+      }
+
+      .ant-tabs-tab-btn::before {
+        content: ' ';
+        left: -@widthReg;
+      }
+
+      .ant-tabs-tab-btn::after {
+        content: ' ';
+        right: -@widthReg;
       }
     }
   }
