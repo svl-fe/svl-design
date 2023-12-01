@@ -20,7 +20,7 @@ export default () => {
   const items = new Array(3).fill(null).map((_, i) => {
     const id = String(i + 1);
     return {
-      label: `Tab Title ${id}`,
+      label: `Tab  ${id}`,
       key: id,
       children: (
         <>
