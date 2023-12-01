@@ -27,6 +27,7 @@
       background-color: #fff;
       border: none;
       border-radius: 20px;
+      min-width: 110px;
 
       &.ant-tabs-tab-active {
         background-color: @primary-color;
@@ -37,6 +38,8 @@
       }
 
       .ant-tabs-tab-btn {
+        text-align: center;
+        width: 100%;
         font-weight: 400;
         line-height: 20px;
       }
@@ -67,9 +70,15 @@
       background-color: transparent;
       border: none;
       padding: 8px 20px;
+      min-width: 110px;
 
       & + .ant-tabs-tab {
         margin-left: 24px;
+      }
+
+      .ant-tabs-tab-btn {
+        text-align: center;
+        width: 100%;
       }
 
       .ant-tabs-tab-btn::before {
@@ -118,7 +127,7 @@
       }
 
       &.ant-tabs-tab-active {
-        border-radius: 20px 20px 0 0;
+        border-radius: 12px 12px 0 0;
         background-color: #fff;
 
         &::before {
