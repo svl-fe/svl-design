@@ -11,21 +11,38 @@ export interface TabsProps extends Omit<ATabsProps, 'type'> {
 }
 
 const Tabs: React.FC<TabsProps> = (props) => {
-  const { className, type, ...rest } = props;
+  const { className = '', type, ...rest } = props;
   let typeProps: ATabsProps['type'];
   const radiusType = type === 'radius-card';
   const outRadiusType = type === 'out-radius';
-  if (!(radiusType || outRadiusType)) {
+  const hasContainFlag = radiusType || outRadiusType;
+  if (!hasContainFlag) {
     typeProps = type;
   } else {
     typeProps = 'card';
   }
-  const TabsCls = classNames('svl-tabs', className, {
+  const TabsCls = classNames('svl-tabs', {
     'svl-radius-tabs': radiusType,
     'svl-out-radius-tabs': outRadiusType,
+    [className]: !hasContainFlag,
   });
 
-  return <ATabs className={TabsCls} type={typeProps} {...rest}></ATabs>;
+  const containsCls = classNames('svl-tabs-container', {
+    [className]: hasContainFlag,
+    'svl-tabs-container-radius': radiusType,
+    'svl-tabs-container-out': outRadiusType,
+  });
+
+  const child = <ATabs className={TabsCls} type={typeProps} {...rest}></ATabs>;
+
+  return hasContainFlag ? (
+    <div className={containsCls}>
+      <div className="svl-header-bg"></div>
+      {child}
+    </div>
+  ) : (
+    child
+  );
 };
 
 type ForwardTabsType = typeof Tabs & { TabPane: typeof TabPane };

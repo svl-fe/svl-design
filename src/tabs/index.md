@@ -17,7 +17,7 @@ toc: false
 import { Tabs } from 'svl-design';
 
 export default () => {
-  const items = new Array(3).fill(null).map((_, i) => {
+  const items = new Array(10).fill(null).map((_, i) => {
     const id = String(i + 1);
     return {
       label: `Tab  ${id}`,
@@ -34,7 +34,7 @@ export default () => {
   return (
     <div>
       <h3>radius-card</h3>
-      <Tabs type="radius-card" items={items}></Tabs>
+      <Tabs className="test" type="radius-card" items={items}></Tabs>
       <h3>out-radius-card</h3>
       <Tabs type="out-radius" items={items}></Tabs>
       <h3>card</h3>

@@ -4,16 +4,38 @@
 @height: 20px;
 @widthReg: 10px;
 
+.svl-tabs-container {
+  position: relative;
+  padding: 6px 24px;
+
+  &.svl-tabs-container-out {
+    padding: 6px 24px 0;
+
+    .svl-header-bg {
+      height: 44px;
+    }
+  }
+
+  .svl-header-bg {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-color: @disabled-bg;
+    height: 56px;
+  }
+}
+
 .svl-tabs.svl-radius-tabs {
   > .ant-tabs-nav {
     &::before {
       display: none;
     }
 
-    .ant-tabs-nav-wrap {
-      padding: 6px 24px;
-      background-color: @disabled-bg;
-    }
+    // .ant-tabs-nav-wrap {
+    //   padding: 6px 24px;
+    //   background-color: @disabled-bg;
+    // }
 
     .ant-tabs-nav-list {
       padding: 5px;
@@ -58,10 +80,10 @@
     }
   }
 
-  .ant-tabs-nav-wrap {
-    padding: 6px 24px 0;
-    background-color: @disabled-bg;
-  }
+  // .ant-tabs-nav-wrap {
+  //   padding: 6px 24px 0;
+  //   background-color: @disabled-bg;
+  // }
 
   .ant-tabs-nav-list {
     padding: 0 5px;
