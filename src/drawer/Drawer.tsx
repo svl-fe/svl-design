@@ -24,6 +24,9 @@ interface DrawerProps extends ADrawerProps {
 }
 
 export const Drawer: React.FC<DrawerProps> = (props) => {
+  const storageLang = window.localStorage.getItem('lang');
+  const enFlag = storageLang === 'en-US';
+
   const {
     title,
     loading,
@@ -37,8 +40,8 @@ export const Drawer: React.FC<DrawerProps> = (props) => {
     onClose,
     onOk,
     children,
-    okText = '完成',
-    cancelText = '取消',
+    okText = enFlag ? 'Complete' : '完成',
+    cancelText = enFlag ? 'Close' : '取消',
     ...rest
   } = props;
 
