@@ -3,23 +3,29 @@
 .svl-btn {
   &.ant-btn {
     min-width: 74px;
+
     &.svl-btn-default:hover:not([disabled]):not(.ant-btn-dangerous) {
       color: @primary-color;
       border-color: @primary-color;
     }
+
     &.svl-btn-default:active:not([disabled]):not(.ant-btn-dangerous) {
       color: @text-color;
       background: @disabled-active-bg;
       border-color: @border-color-base;
     }
+
     & + & {
-      margin-left: 16px;
+      margin-left: 12px;
     }
 
-    &.ant-btn-primary:not(.ant-btn-background-ghost):not([disabled]):not(.ant-btn-dangerous) {
+    &.ant-btn-primary:not(.ant-btn-background-ghost):not([disabled]):not(
+        .ant-btn-dangerous
+      ) {
       &:hover {
         background: @primary-color-hover;
       }
+
       &:active {
         background: @primary-color-active;
       }
@@ -28,15 +34,9 @@
 
   &.ant-btn.ant-btn-sm {
     min-width: 58px;
-    & + & {
-      margin-left: 8px;
-    }
   }
 
   &.ant-btn.ant-btn-lg {
     min-width: 96px;
-    & + & {
-      margin-left: 24px;
-    }
   }
 }
