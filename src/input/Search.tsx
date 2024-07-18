@@ -15,11 +15,35 @@ type SearchProps = ASearchProps;
 
 // @ts-ignore
 const Search = React.forwardRef<AInput, SearchProps>((props, ref) => {
-  const { className, children, ...rest } = props;
+  const { className, children, onChange, ...rest } = props;
   const cls = classNames('svl-search', className);
+  const timeRef = React.useRef<NodeJS.Timeout>();
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    onChange?.(e);
+    if (e?.target?.value === '') {
+      timeRef.current = setTimeout(() => {
+        rest.onSearch?.('');
+      }, 100);
+    }
+  };
+
+  React.useEffect(() => {
+    return () => {
+      if (timeRef.current) {
+        clearTimeout(timeRef.current);
+      }
+    };
+  }, []);
 
   return (
-    <ASearch className={cls} enterButton={SearchSvg} {...rest} ref={ref}>
+    <ASearch
+      className={cls}
+      enterButton={SearchSvg}
+      onChange={handleChange}
+      {...rest}
+      ref={ref}
+    >
       {children}
     </ASearch>
   );

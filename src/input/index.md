@@ -18,10 +18,13 @@ import { Input } from 'svl-design';
 const { Search } = Input;
 
 export default () => {
+  const handleEnter = (value: string) => {
+    console.log(value);
+  };
   return (
     <div>
       <h1>搜索框 </h1>
-      <Search value="placeholder" placeholder="placeholder" allowClear />
+      <Search placeholder="placeholder" onSearch={handleEnter} allowClear />
     </div>
   );
 };
