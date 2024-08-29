@@ -18,6 +18,8 @@ export { default as Label } from './label';
 export type { LabelProps } from './label';
 export { default as Modal } from './modal';
 export type { ModalFuncProps, ModalProps } from './modal';
+export { default as PageDrawer } from './page-drawer';
+export type { PageDrawerProps } from './page-drawer';
 export { default as Popconfirm } from './popconfirm';
 export type { PopconfirmProps } from './popconfirm';
 export { default as Select } from './select';
