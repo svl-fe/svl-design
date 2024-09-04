@@ -41,7 +41,7 @@ export default () => {
 
       <PageDrawer
         loading={loading}
-        visible={visible}
+        open={visible}
         titleName="页码抽屉"
         onClose={() => setVisible(false)}
         onOk={onOk}
