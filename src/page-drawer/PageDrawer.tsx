@@ -23,6 +23,10 @@ interface PageDrawerProps extends ADrawerProps {
   cancelText?: string;
   /** 确认按钮文字 默认值 完成 */
   okText?: string;
+  /** 前一页使能状态 */
+  prevDisabled?: boolean;
+  /** 下一个使能状态 */
+  nextDisabled?: boolean;
   pagination?: React.ReactNode | null;
   /** 点击确定回调 */
   onOk?: (e: React.MouseEvent<HTMLElement>) => void;
@@ -49,6 +53,8 @@ export const PageDrawer: React.FC<PageDrawerProps> = (props) => {
     extra,
     footer,
     closeIcon = Close,
+    prevDisabled = false,
+    nextDisabled = false,
     showFull = true,
     open,
     onClose,
@@ -106,11 +112,17 @@ export const PageDrawer: React.FC<PageDrawerProps> = (props) => {
               component={upSvg}
               className="svl-page-drawer-icon"
               onClick={() => handlePrevPage?.()}
+              style={
+                prevDisabled ? { cursor: 'not-allowed' } : { cursor: 'pointer' }
+              }
             />
             <Icon
               component={downSvg}
               className="svl-page-drawer-icon"
               onClick={() => handleNextPage?.()}
+              style={
+                nextDisabled ? { cursor: 'not-allowed' } : { cursor: 'pointer' }
+              }
             />
             {showFull ? (
               <Icon
