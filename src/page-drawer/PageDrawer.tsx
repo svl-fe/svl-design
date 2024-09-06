@@ -16,7 +16,7 @@ import './style/index.less';
 
 interface PageDrawerProps extends ADrawerProps {
   /** 标题名字 */
-  titleName?: string;
+  titleName?: React.ReactNode;
   /** 载入状态 */
   loading?: boolean;
   /** 取消按钮文字 默认值 取消 */
