@@ -10,7 +10,7 @@ import * as React from 'react';
 import { useEffect, useRef } from 'react';
 import { Close } from '../const';
 import { ReactComponent as downSvg } from '../svg/icon-down.svg';
-import { ReactComponent as fullSvg } from '../svg/icon-spread.svg';
+import { ReactComponent as closeSvg } from '../svg/icon-guanbi.svg';
 import { ReactComponent as upSvg } from '../svg/icon-up.svg';
 import './style/index.less';
 
@@ -34,9 +34,7 @@ interface PageDrawerProps extends ADrawerProps {
   handlePrevPage?: () => void;
   /** 下一页 */
   handleNextPage?: () => void;
-  /** 全屏 */
-  handleFull?: () => void;
-  showFull?: () => void;
+  showClose?: () => void;
 }
 
 export const PageDrawer: React.FC<PageDrawerProps> = (props) => {
@@ -55,13 +53,12 @@ export const PageDrawer: React.FC<PageDrawerProps> = (props) => {
     closeIcon = Close,
     prevDisabled = false,
     nextDisabled = false,
-    showFull = true,
+    showClose = true,
     open,
     onClose,
     onOk,
     handleNextPage,
     handlePrevPage,
-    handleFull,
     pagination = null,
     children,
     okText = enFlag ? 'Complete' : '完成',
@@ -133,11 +130,11 @@ export const PageDrawer: React.FC<PageDrawerProps> = (props) => {
                 nextDisabled ? { cursor: 'not-allowed' } : { cursor: 'pointer' }
               }
             />
-            {showFull ? (
+            {showClose ? (
               <Icon
-                component={fullSvg}
+                component={closeSvg}
                 className="svl-page-drawer-icon"
-                onClick={() => handleFull?.()}
+                onClick={handleClose}
                 style={{ marginTop: '8px' }}
               />
             ) : null}
