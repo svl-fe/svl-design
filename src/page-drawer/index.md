@@ -14,7 +14,7 @@ toc: false
 示例:
 
 ```tsx
-import { Button } from 'antd';
+import { Button, Tooltip } from 'antd';
 import { useState } from 'react';
 import { PageDrawer } from 'svl-design';
 
@@ -47,9 +47,7 @@ export default () => {
         onOk={onOk}
         footer={null}
       >
-        <p>内容区....</p>
-        <p>内容区...</p>
-        <p>内容区...</p>
+        <Tooltip title="提示区">内容提示</Tooltip>
       </PageDrawer>
     </div>
   );

@@ -87,7 +87,9 @@ export const PageDrawer: React.FC<PageDrawerProps> = (props) => {
         drawerContentRef.current &&
         !drawerContentRef.current.contains(event.target as Node) &&
         !(event.target as Element).closest('.ant-drawer-content-wrapper') &&
-        !(event.target as Element).closest('[data-drawer-element]') // 新增：检查是否点击了带有 data-drawer-element 属性的元素
+        !(event.target as Element).closest('[data-drawer-element]') &&
+        !(event.target as Element).closest('.ant-modal') && // 检查是否点击了模态框
+        !(event.target as Element).closest('.ant-tooltip') // 检查是否点击了 Tooltip
       ) {
         onClose?.(event as any);
       }
@@ -181,7 +183,9 @@ export const PageDrawer: React.FC<PageDrawerProps> = (props) => {
       onClose={onClose}
       {...rest}
     >
-      <div ref={drawerContentRef}>{children}</div>
+      <div ref={drawerContentRef} data-drawer-element="content">
+        {children}
+      </div>
     </ADrawer>
   );
 };
