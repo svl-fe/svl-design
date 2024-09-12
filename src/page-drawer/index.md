@@ -14,12 +14,13 @@ toc: false
 示例:
 
 ```tsx
-import { Button, Tooltip } from 'antd';
+import { Button, Modal, Tooltip } from 'antd';
 import { useState } from 'react';
 import { PageDrawer } from 'svl-design';
 
 export default () => {
   const [visible, setVisible] = useState(false);
+  const [modalVisible, setModalVisible] = useState(false);
   const [loading, setLoading] = useState(false);
 
   const onOk = () => {
@@ -48,7 +49,18 @@ export default () => {
         footer={null}
       >
         <Tooltip title="提示区">内容提示</Tooltip>
+        <div>
+          <Button onClick={() => setModalVisible(true)}>模态框</Button>
+        </div>
       </PageDrawer>
+      <Modal
+        open={modalVisible}
+        title="模态框"
+        onCancel={() => setModalVisible(false)}
+        onOk={() => setModalVisible(false)}
+      >
+        点击模态框蒙层
+      </Modal>
     </div>
   );
 };

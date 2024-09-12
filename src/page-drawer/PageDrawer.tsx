@@ -82,14 +82,21 @@ export const PageDrawer: React.FC<PageDrawerProps> = (props) => {
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
+      const modalMask = (event.target as Element).closest('.ant-modal-wrap');
+      if (modalMask) {
+        // 如果点击的是模态框的蒙层，阻止事件冒泡
+        event.stopPropagation();
+        return;
+      }
+
       if (
         open &&
         drawerContentRef.current &&
         !drawerContentRef.current.contains(event.target as Node) &&
         !(event.target as Element).closest('.ant-drawer-content-wrapper') &&
-        !(event.target as Element).closest('[data-drawer-element]') &&
-        !(event.target as Element).closest('.ant-modal') && // 检查是否点击了模态框
-        !(event.target as Element).closest('.ant-tooltip') // 检查是否点击了 Tooltip
+        !(event.target as Element).closest('[data-drawer-element]') && // 新增：检查是否点击了带有 data-drawer-element 属性的元素
+        !(event.target as Element).closest('.ant-modal') &&
+        !(event.target as Element).closest('.ant-tooltip')
       ) {
         onClose?.(event as any);
       }
