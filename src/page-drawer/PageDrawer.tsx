@@ -34,7 +34,7 @@ interface PageDrawerProps extends ADrawerProps {
   handlePrevPage?: () => void;
   /** 下一页 */
   handleNextPage?: () => void;
-  showClose?: () => void;
+  showClose?: boolean;
 }
 
 export const PageDrawer: React.FC<PageDrawerProps> = (props) => {
