@@ -80,8 +80,10 @@ export const PageDrawer: React.FC<PageDrawerProps> = (props) => {
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       const modalMask = (event.target as Element).closest('.ant-modal-wrap');
-      if (modalMask) {
-        // 如果点击的是模态框的蒙层，阻止事件冒泡
+      const drawerMask = (event.target as Element).closest('.ant-drawer-mask');
+
+      if (modalMask || drawerMask) {
+        // 如果点击的是模态框或抽屉的蒙层，阻止事件冒泡
         event.stopPropagation();
         return;
       }
