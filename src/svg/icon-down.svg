@@ -1,4 +1,5 @@
 <svg class="icon" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
-    <path data-follow-fill="#C8C9CC" fill="#C8C9CC" d="M768 384H256l256 256 256-256z"/>
-    <path data-follow-fill="#C8C9CC" fill="#C8C9CC" d="M226.432 371.776A32 32 0 0 1 256 352h512a32 32 0 0 1 22.656 54.656l-256 256a32 32 0 0 1-45.312 0l-256-256a32 32 0 0 1-6.912-34.88zM333.312 416 512 594.752 690.752 416H333.248z"/>
+    <path data-follow-fill="currentColor" fill="currentColor" d="M768 384H256l256 256 256-256z" />
+    <path data-follow-fill="currentColor" fill="currentColor"
+        d="M226.432 371.776A32 32 0 0 1 256 352h512a32 32 0 0 1 22.656 54.656l-256 256a32 32 0 0 1-45.312 0l-256-256a32 32 0 0 1-6.912-34.88zM333.312 416 512 594.752 690.752 416H333.248z" />
 </svg>

@@ -5,7 +5,6 @@ import classNames from 'classnames';
 import { hex2rgba } from 'svl-design/utils';
 import { ReactComponent as IconSeal } from '../svg/icon-seal.svg';
 import './style.less';
-
 export interface BuoyCardProps extends HTMLAttributes<HTMLDivElement> {
   color?: React.CSSProperties['color'];
   text?: string;
