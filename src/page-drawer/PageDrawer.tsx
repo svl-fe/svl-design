@@ -81,8 +81,11 @@ export const PageDrawer: React.FC<PageDrawerProps> = (props) => {
     const handleClickOutside = (event: MouseEvent) => {
       const modalMask = (event.target as Element).closest('.ant-modal-wrap');
       const drawerMask = (event.target as Element).closest('.ant-drawer-mask');
+      const imgMask = (event.target as Element).closest(
+        '.ant-image-preview-mask',
+      );
 
-      if (modalMask || drawerMask) {
+      if (modalMask || drawerMask || imgMask) {
         // 如果点击的是模态框或抽屉的蒙层，阻止事件冒泡
         event.stopPropagation();
         return;
