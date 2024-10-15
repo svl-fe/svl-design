@@ -98,7 +98,8 @@ export const PageDrawer: React.FC<PageDrawerProps> = (props) => {
         !(event.target as Element).closest('.ant-drawer-content-wrapper') &&
         !(event.target as Element).closest('[data-drawer-element]') && // 新增：检查是否点击了带有 data-drawer-element 属性的元素
         !(event.target as Element).closest('.ant-modal') &&
-        !(event.target as Element).closest('.ant-tooltip')
+        !(event.target as Element).closest('.ant-tooltip') &&
+        !(event.target as Element).closest('.ant-image-preview-body')
       ) {
         onClose?.(event as any);
       }
