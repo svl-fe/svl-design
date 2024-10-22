@@ -82,7 +82,7 @@ export const PageDrawer: React.FC<PageDrawerProps> = (props) => {
       const modalMask = (event.target as Element).closest('.ant-modal-wrap');
       const drawerMask = (event.target as Element).closest('.ant-drawer-mask');
       const imgMask = (event.target as Element).closest(
-        '.ant-image-preview-mask',
+        '.ant-image-preview-wrap',
       );
 
       if (modalMask || drawerMask || imgMask) {
