@@ -144,11 +144,13 @@ export const PageDrawer: React.FC<PageDrawerProps> = (props) => {
                 nextDisabled ? { cursor: 'not-allowed' } : { cursor: 'pointer' }
               }
             />
-            <Icon
-              component={spreadSvg}
-              className="svl-page-drawer-icon"
-              onClick={() => gotoDetail?.()}
-            />
+            {gotoDetail ? (
+              <Icon
+                component={spreadSvg}
+                className="svl-page-drawer-icon"
+                onClick={() => gotoDetail?.()}
+              />
+            ) : null}
             {showClose ? (
               <Icon
                 component={closeSvg}
