@@ -68,10 +68,17 @@ export default () => {
 
 #### 参数说明
 
-| 属性       | 说明         | 类型                                         | 默认值 | 是否必传 | 版本 |
-| ---------- | ------------ | -------------------------------------------- | ------ | -------- | ---- |
-| titleName  | 标题名字     | string                                       |        | 否       |      |
-| loading    | 载入状态     | boolean                                      |        | 否       |      |
-| cancelText | 取消按钮文字 | string                                       | 取消   | 否       |      |
-| okText     | 确认按钮文字 | string                                       | 完成   | 否       |      |
-| onOk       | 点击确定回调 | (e: React.MouseEvent\<HTMLElement\>) => void |        | 否       |      |
+| 属性           | 说明             | 类型                                         | 默认值 | 是否必传 | 版本 |
+| -------------- | ---------------- | -------------------------------------------- | ------ | -------- | ---- |
+| titleName      | 标题名字         | string                                       |        | 否       |      |
+| loading        | 载入状态         | boolean                                      |        | 否       |      |
+| cancelText     | 取消按钮文字     | string                                       | 取消   | 否       |      |
+| okText         | 确认按钮文字     | string                                       | 完成   | 否       |      |
+| onOk           | 点击确定回调     | (e: React.MouseEvent\<HTMLElement\>) => void |        | 否       |      |
+| prevDisabled   | 前一页使能状态   | boolean                                      |        | 否       |      |
+| nextDisabled   | 下一个使能状态   | boolean                                      |        | 否       |      |
+| pagination     | 操作项           | React.ReactNode                              |        | 否       |      |
+| handlePrevPage | 上一页           | () => void                                   |        | 否       |      |
+| handleNextPage | 下一页           | () => void                                   |        | 否       |      |
+| gotoDetail     | 下一页           | () => void                                   |        | 否       |      |
+| showClose      | 是否显示关闭按钮 | boolean                                      |        | 否       |      |

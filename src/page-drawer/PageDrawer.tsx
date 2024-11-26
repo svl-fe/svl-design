@@ -11,6 +11,7 @@ import { useEffect, useRef } from 'react';
 import { Close } from '../const';
 import { ReactComponent as downSvg } from '../svg/icon-down.svg';
 import { ReactComponent as closeSvg } from '../svg/icon-guanbi.svg';
+import { ReactComponent as spreadSvg } from '../svg/icon-spread.svg';
 import { ReactComponent as upSvg } from '../svg/icon-up.svg';
 import './style/index.less';
 
@@ -27,6 +28,7 @@ interface PageDrawerProps extends ADrawerProps {
   prevDisabled?: boolean;
   /** 下一个使能状态 */
   nextDisabled?: boolean;
+  /** 操作项 */
   pagination?: React.ReactNode | null;
   /** 点击确定回调 */
   onOk?: (e: React.MouseEvent<HTMLElement>) => void;
@@ -34,6 +36,9 @@ interface PageDrawerProps extends ADrawerProps {
   handlePrevPage?: () => void;
   /** 下一页 */
   handleNextPage?: () => void;
+  /** 跳转详情 */
+  gotoDetail?: () => void;
+  /** 是否显示关闭按钮 */
   showClose?: boolean;
 }
 
@@ -59,6 +64,7 @@ export const PageDrawer: React.FC<PageDrawerProps> = (props) => {
     onOk,
     handleNextPage,
     handlePrevPage,
+    gotoDetail,
     pagination = null,
     children,
     okText = enFlag ? 'Complete' : '完成',
@@ -138,12 +144,16 @@ export const PageDrawer: React.FC<PageDrawerProps> = (props) => {
                 nextDisabled ? { cursor: 'not-allowed' } : { cursor: 'pointer' }
               }
             />
+            <Icon
+              component={spreadSvg}
+              className="svl-page-drawer-icon"
+              onClick={() => gotoDetail?.()}
+            />
             {showClose ? (
               <Icon
                 component={closeSvg}
                 className="svl-page-drawer-icon"
                 onClick={handleClose}
-                style={{ marginTop: '8px' }}
               />
             ) : null}
           </>
