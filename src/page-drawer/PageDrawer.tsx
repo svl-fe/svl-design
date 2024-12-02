@@ -131,7 +131,7 @@ export const PageDrawer: React.FC<PageDrawerProps> = (props) => {
             <Icon
               component={upSvg}
               className="svl-page-drawer-icon"
-              onClick={() => handlePrevPage?.()}
+              onClick={prevDisabled ? undefined : () => handlePrevPage?.()}
               style={
                 prevDisabled ? { cursor: 'not-allowed' } : { cursor: 'pointer' }
               }
@@ -139,7 +139,7 @@ export const PageDrawer: React.FC<PageDrawerProps> = (props) => {
             <Icon
               component={downSvg}
               className="svl-page-drawer-icon"
-              onClick={() => handleNextPage?.()}
+              onClick={nextDisabled ? undefined : () => handleNextPage?.()}
               style={
                 nextDisabled ? { cursor: 'not-allowed' } : { cursor: 'pointer' }
               }
