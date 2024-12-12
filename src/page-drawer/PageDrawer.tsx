@@ -7,7 +7,7 @@ import {
 } from 'antd';
 import classNames from 'classnames';
 import * as React from 'react';
-import { useEffect, useRef } from 'react';
+import { useRef } from 'react';
 import { Close } from '../const';
 import { ReactComponent as downSvg } from '../svg/icon-down.svg';
 import { ReactComponent as closeSvg } from '../svg/icon-guanbi.svg';
@@ -83,41 +83,41 @@ export const PageDrawer: React.FC<PageDrawerProps> = (props) => {
     onOk?.(event);
   };
 
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      const modalMask = (event.target as Element).closest('.ant-modal-wrap');
-      const drawerMask = (event.target as Element).closest('.ant-drawer-mask');
-      const previewImgMask =
-        (event.target as Element).closest('.ant-image-preview-wrap') ||
-        (event.target as Element).closest(
-          '.ant-image-preview-operations-wrapper',
-        );
+  // useEffect(() => {
+  //   const handleClickOutside = (event: MouseEvent) => {
+  //     const modalMask = (event.target as Element).closest('.ant-modal-wrap');
+  //     const drawerMask = (event.target as Element).closest('.ant-drawer-mask');
+  //     const previewImgMask =
+  //       (event.target as Element).closest('.ant-image-preview-wrap') ||
+  //       (event.target as Element).closest(
+  //         '.ant-image-preview-operations-wrapper',
+  //       );
 
-      if (modalMask || drawerMask || previewImgMask) {
-        // 如果点击的是模态框或抽屉的蒙层，阻止事件冒泡
-        event.stopPropagation();
-        return;
-      }
+  //     if (modalMask || drawerMask || previewImgMask) {
+  //       // 如果点击的是模态框或抽屉的蒙层，阻止事件冒泡
+  //       event.stopPropagation();
+  //       return;
+  //     }
 
-      if (
-        open &&
-        drawerContentRef.current &&
-        !drawerContentRef.current.contains(event.target as Node) &&
-        !(event.target as Element).closest('.ant-drawer-content-wrapper') &&
-        !(event.target as Element).closest('[data-drawer-element]') && // 新增：检查是否点击了带有 data-drawer-element 属性的元素
-        !(event.target as Element).closest('.ant-modal') &&
-        !(event.target as Element).closest('.ant-tooltip') &&
-        !(event.target as Element).closest('.ant-image-preview-body')
-      ) {
-        onClose?.(event as any);
-      }
-    };
+  //     if (
+  //       open &&
+  //       drawerContentRef.current &&
+  //       !drawerContentRef.current.contains(event.target as Node) &&
+  //       !(event.target as Element).closest('.ant-drawer-content-wrapper') &&
+  //       !(event.target as Element).closest('[data-drawer-element]') && // 新增：检查是否点击了带有 data-drawer-element 属性的元素
+  //       !(event.target as Element).closest('.ant-modal') &&
+  //       !(event.target as Element).closest('.ant-tooltip') &&
+  //       !(event.target as Element).closest('.ant-image-preview-body')
+  //     ) {
+  //       onClose?.(event as any);
+  //     }
+  //   };
 
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
-  }, [open, onClose]);
+  //   document.addEventListener('mousedown', handleClickOutside);
+  //   return () => {
+  //     document.removeEventListener('mousedown', handleClickOutside);
+  //   };
+  // }, [open, onClose]);
 
   const dftTitle = (
     <div className="svl-title" data-drawer-element="title">
@@ -196,7 +196,6 @@ export const PageDrawer: React.FC<PageDrawerProps> = (props) => {
 
   return (
     <ADrawer
-      mask={false}
       className={drawerCls}
       placement={placement}
       closable={closable}
