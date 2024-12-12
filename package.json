@@ -59,7 +59,6 @@
   },
   "dependencies": {
     "@ant-design/icons": "^4.7.0",
-    "ahooks": "^2.0.0",
     "classnames": "^2.3.1"
   },
   "devDependencies": {
