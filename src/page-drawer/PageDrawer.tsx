@@ -4,6 +4,7 @@ import {
   DrawerProps as ADrawerProps,
   Button,
   Space,
+  Spin,
 } from 'antd';
 import classNames from 'classnames';
 import * as React from 'react';
@@ -128,22 +129,30 @@ export const PageDrawer: React.FC<PageDrawerProps> = (props) => {
       >
         {!pagination ? (
           <>
-            <Icon
-              component={upSvg}
-              className="svl-page-drawer-icon"
-              onClick={prevDisabled ? undefined : () => handlePrevPage?.()}
-              style={
-                prevDisabled ? { cursor: 'not-allowed' } : { cursor: 'pointer' }
-              }
-            />
-            <Icon
-              component={downSvg}
-              className="svl-page-drawer-icon"
-              onClick={nextDisabled ? undefined : () => handleNextPage?.()}
-              style={
-                nextDisabled ? { cursor: 'not-allowed' } : { cursor: 'pointer' }
-              }
-            />
+            <Spin spinning={loading}>
+              <span className="svl-page-drawer-page-action">
+                <Icon
+                  component={upSvg}
+                  className="svl-page-drawer-icon"
+                  onClick={prevDisabled ? undefined : () => handlePrevPage?.()}
+                  style={
+                    prevDisabled
+                      ? { cursor: 'not-allowed' }
+                      : { cursor: 'pointer' }
+                  }
+                />
+                <Icon
+                  component={downSvg}
+                  className="svl-page-drawer-icon"
+                  onClick={nextDisabled ? undefined : () => handleNextPage?.()}
+                  style={
+                    nextDisabled
+                      ? { cursor: 'not-allowed' }
+                      : { cursor: 'pointer' }
+                  }
+                />
+              </span>
+            </Spin>
             {gotoDetail ? (
               <Icon
                 component={spreadSvg}
